@@ -16,6 +16,12 @@ what's here to work the way you'd like it to.
 - Pagination
 - Footer
 
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins|PT+Serif|Galada');
+
+
 /* Variables
 /* ---------------------------------------------------------- */
 
@@ -458,7 +464,6 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    color: var(--color-base);
     line-height: 1.15;
     font-weight: 700;
     text-rendering: optimizeLegibility;
@@ -514,6 +519,57 @@ h6 {
     font-weight: 500;
 }
 
+
+
+html {
+    font-size: 8px;
+}
+
+body {
+    background: #181949;
+    background: #f9fbfb;
+    color: #668FCC;
+    color: #667ae1;
+    font-family: 'Open Sans';
+}
+
+a:not(.header-title) {
+    color: #d659ae;
+    text-decoration: none;
+    border-bottom: 1px dotted #a00afc;
+    transition: 0.5s;
+}
+
+a:not(.header-title):hover {
+    text-decoration: none;
+    color: #fff;
+    background: #d659ae;
+}
+
+p {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    line-height: 2;
+    color: #88A6DD;
+    color: #4e6082;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    text-indent: -9999px;
+}
+
+
 /* Layout
 /* ---------------------------------------------------------- */
 
@@ -525,9 +581,9 @@ h6 {
 }
 
 .container {
-    max-width: 1120px;
     margin: 0 auto;
-    padding: 0 4vw;
+    max-width: 1040px;
+    width: 100%;
 }
 
 .content {
@@ -758,6 +814,302 @@ h6 {
     text-decoration: none;
 }
 
+
+/* STAR NEW */
+
+
+.header-home {
+    background: #08042F;
+    background: #fff;
+}
+
+.header-home:after {
+    content: '';
+    height: 6rem;
+    display: block;
+    transform: rotate(-2deg);
+    background: #fff;;
+    z-index: 999;
+    position: relative;
+    top: 24px;
+    margin-top: -36px;
+    box-shadow: 0px 7px 11px rgba(0,0,0,0.03)
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-columns:  1fr 3fr;
+    max-width: 1040px;
+    margin: 1rem auto 0 auto;
+    border-radius: 1rem;
+}
+
+.header-description {
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Poppins';
+    padding: 0 5rem;
+}
+
+.header-description h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #1d3195;
+}
+
+.header-description h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.header-image {
+    text-align: center;
+    /* margin: 3rem 0 1rem 3rem; */
+    margin-top: 3rem;
+}
+.header-image img {
+    width: 50%;
+    max-width: 24rem;
+    border-radius: 50%;
+}
+
+.header-title {
+    background-image: linear-gradient(90deg,#f67c6a,#d659ae,#b266e3,#5c61ea);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 4rem;
+    font-weight: 600;
+    display: block;
+    font-family: galada,sans-serif;
+    transition: 0s;
+    line-height: 2;
+    text-align: center;
+}
+
+.header-title:hover {
+    filter: hue-rotate(360deg);
+    transition: 1s;
+}
+
+/* 5. Site Navigation
+/* ---------------------------------------------------------- */
+
+.site-nav {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-y: hidden;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+.site-nav-left {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin-right: 10px;
+    padding-bottom: 80px;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+
+    -ms-overflow-scrolling: touch;
+}
+
+/* Site Nav Hack Explanation (above):
+
+What's happening above it .site-nav-left is set to overflow-x and allow sideways scrolling, so that when there isn't enough space for all nav items (either due to lots of nav items, or a small viewport), you can still scroll side-to-side to reach them.
+
+The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px of padding-bottom and a 40px fixed height parent (.site-nav) hides that entirely. Slightly hacky code. But nice clean end-result.
+
+*/
+
+.site-nav-left .header-title {
+    color: #fff;
+    font-size: 3rem;
+    padding: 0.1rem 3rem 0 0;
+}
+
+.site-nav-left .header-title:hover {
+    text-decoration: none;
+    filter: none;
+}
+
+.site-nav-logo {
+    flex-shrink: 0;
+    display: block;
+    margin-right: 24px;
+    padding: 11px 0;
+    color: #fff;
+    font-size: 1.7rem;
+    line-height: 1em;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+.site-nav-logo:hover {
+    text-decoration: none;
+}
+
+.site-nav-logo img {
+    display: block;
+    width: auto;
+    height: 21px;
+}
+
+.nav {
+    display: flex;
+    margin: 0 0 0 -12px;
+    padding: 0;
+    list-style: none;
+}
+
+.nav li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.nav li a {
+    display: block;
+    margin: 0;
+    padding: 10px 12px;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav li a:hover {
+    text-decoration: none;
+    opacity: 1;
+    background: none;
+    transition: 0s;
+}
+
+.site-nav-right {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.social-links {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.social-links a:last-of-type {
+    padding-right: 20px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    opacity: 1;
+    background: none !important;
+}
+
+.social-link svg {
+    height: 1.8rem;
+    fill: #fff;
+}
+
+.social-link-fb svg {
+    height: 1.5rem;
+}
+
+.social-link-wb svg {
+    height: 1.6rem;
+}
+
+.social-link-wb svg path {
+    stroke: #fff;
+}
+
+.social-link-rss svg {
+    height: 1.9rem;
+}
+
+a.subscribe-button {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1em;
+    border-radius: 2rem;
+    opacity: 0.8;
+    background: none;
+    border: 1px solid #fff !important;
+    font-size: 2rem;
+    color: #fff;
+}
+
+a.subscribe-button:hover {
+    text-decoration: none;
+    opacity: 1;
+    background: none;
+    transition: 0s;
+}
+
+.rss-button {
+    opacity: 0.8;
+}
+
+.rss-button:hover {
+    opacity: 1;
+}
+
+.rss-button svg {
+    margin-bottom: 1px;
+    height: 2.1rem;
+    fill: #fff;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .site-nav-left {
+        margin-right: 0;
+        padding-left: 4vw;
+    }
+    .site-nav-right {
+        display: none;
+    }
+}
+
+.site-header.outer {
+    background: linear-gradient(90deg,#d659ae,#b266e3);
+    padding: 1rem;
+}
+
+.site-header.outer a {
+    border: none;
+}
+
+
+/* END NEW */
+
+
+
 /* Main
 /* ---------------------------------------------------------- */
 
@@ -811,7 +1163,14 @@ h6 {
 .post-card-excerpt {
     font-size: 1.6rem;
     line-height: 1.55em;
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    line-height: 2;
+    color: #88A6DD;
+    color: #4e6082;
 }
+
+
 
 .post-card-image {
     margin: 0 0 10px 0;
@@ -859,6 +1218,188 @@ h6 {
 
 .post-card-avatar .default-avatar {
     width: 26px;
+}
+
+
+.post-card {
+    -ms-flex: 1 1 300px;
+    flex: 1 1 300px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 300px;
+    background: #fff 50%;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    transition: all .5s ease;
+}
+
+a.post-card-image-link {
+    border: none;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.post-card-title {
+    margin-top: 0;
+}
+
+.post-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-card-excerpt {
+    font-family: Georgia, serif;
+}
+
+
+a.post-card-content-link {
+    position: relative;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: block;
+    padding: 25px 25px 0;
+    color: #15171a;
+    border: none;
+}
+
+.post-card-title {
+    color: #15171a;
+}
+
+.post-feed {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    padding: 40px 0 0 0;
+}
+
+.post-card {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 20px 40px;
+    min-height: 300px;
+    background: #fff center center;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+    transition: all 0.5s ease;
+}
+
+.post-card:hover {
+    box-shadow: rgba(39,44,49,0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
+    transition: all 0.4s ease;
+    transform: translate3D(0, -1px, 0) scale(1.02);
+}
+
+.post-card-image-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+a.post-card-image-link {
+    border: none;
+}
+
+a.post-card-image-link:hover {
+    background: none;
+}
+
+.post-card-image {
+    width: auto;
+    height: 200px;
+    background: var(--lightgrey) no-repeat center center;
+    background-size: cover;
+}
+
+a.post-card-content-link {
+    position: relative;
+    flex-grow: 1;
+    display: block;
+    padding: 25px 25px 0;
+    color: var(--darkgrey);
+    border: none;
+}
+
+a.post-card-content-link:hover {
+    text-decoration: none;
+    background: inherit;
+    color: inherit;
+}
+
+.post-card-tags {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--midgrey);
+    font-size: 1.2rem;
+    line-height: 1.15em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.post-card-title {
+    margin-top: 0;
+}
+
+.post-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-card-excerpt {
+    font-family: Georgia, serif;
+}
+
+.post-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 25px 25px;
+}
+
+.author-profile-image,
+.avatar-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: color(var(--lightgrey) l(+10%));
+    border-radius: 100%;
+
+    object-fit: cover;
+}
+
+.post-card-meta .profile-image-wrapper,
+.post-card-meta .avatar-wrapper {
+    position: relative;
+}
+
+.author-list {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.author-list-item {
+    position: relative;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -1015,4 +1556,214 @@ h6 {
 
 .site-foot-nav-right a:last-child {
     padding-right: 0;
+}
+
+
+
+/* Custom
+/* ---------------------------------------------------------- */
+
+
+@media (min-width: 900px) {
+    .home-template .post-feed,
+    .tag-template .post-feed,
+    .author-template .post-feed {
+        margin-top: -70px;
+        padding-top: 0;
+    }
+    .home-template .site-nav {
+        position: relative;
+        top: -70px;
+    }
+}
+
+.home-title {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: poppins, sans-serif;
+    letter-spacing: 0.1rem;
+    color: #1d3195;
+}
+
+.home-post {
+    /* font-family: 'PT serif'; */
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 4rem;
+}
+
+.home-section {
+    margin-bottom: 2rem;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns:  1fr 3fr;
+    grid-column-gap: 2rem;
+}
+
+.home-box {
+    /* background: #181949; */
+    padding: 4rem 6rem;
+    border-radius: 1rem;
+    /* box-shadow: 0px 1px 3px rgba(0,0,0,0.1); */
+}
+
+.big-box p {
+    max-width: 570px;
+    margin: 2rem 0 4rem;
+}
+
+.location-box {
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.location-box-inner {
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    padding: 0 3rem 3rem;
+    margin-top: 3rem;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    background: #fdfdfd;
+}
+
+.location-box-inner svg {
+    width: 40px;
+    fill: #fff;
+    margin: 1rem 0 3rem 0;
+    margin-top: -3rem;
+    background: #a00afc;
+    border-radius: 50%;
+    padding: 1.2rem;
+}
+
+.location-box-title {
+    text-align: left;
+}
+
+.location-box-footer {
+    font-size: 12px;
+    margin: 0;
+    color: #aaa;
+}
+
+.location-box-footer a {
+    color: #777;
+    border: none;
+}
+
+.location-box-footer a:hover {
+    color: #d659ae;
+    background: none;
+}
+
+.home-links {
+    display: block;
+}
+
+.home-links-work {
+    border: 1px solid #f66a75;
+    color: #f66a75;
+}
+
+.home-links-travel {
+    border: 1px solid #d659ae;
+    color: #d659ae;
+}
+
+.home-links-art {
+    border: 1px solid #b266e3;
+    color: #b266e3;
+}
+
+.home-links-projects {
+    border: 1px solid #795dea;
+    color: #795dea;
+}
+
+.home-links a {
+    border: none;
+}
+
+.home-links a:hover {
+    background: none;
+}
+
+.home-links div:hover {
+    transform: scale(1.05);
+}
+
+.home-links div {
+    margin: 0 2rem 0 0;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align:center;
+    line-height: 2;
+    background: #fff;
+    transition: 0.2s;
+}
+
+.home-tools {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home-tools a {
+    color: #fff;
+    border: none;
+}
+
+.home-tool {
+    padding: 1.5rem 3rem;
+    border-radius: 0.5rem;
+    transition: .25s;
+    margin-right: 0.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.home-tool:hover {
+    opacity: 1 !important;
+}
+
+.home-tools-imgs img {
+    width: 100px;   
+    height: 50px;
+    object-fit: contain;
+    margin: 4rem 1rem 1rem 0;
+    filter: saturate(0);
+    transition: 0.5s;
+}
+
+.tools-wrap {
+    min-height: 100px;
+}
+
+.home-tools-imgs img:hover {
+    filter: saturate(1);
+}
+
+.outer {
+    padding: 4rem 4vw 0 4vw;
+}
+
+.reading-time {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    color: #738a94;
+    font-size: 1.2rem;
+    line-height: 33px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    text-transform: uppercase;
 }

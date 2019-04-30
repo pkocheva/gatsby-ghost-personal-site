@@ -25,15 +25,40 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
     return (
     <>
+        
         <Helmet>
             <html lang={site.lang} />
             <body className={bodyClass} />
         </Helmet>
+        
 
         <div className="viewport">
 
             <div className="viewport-top">
+            
                 {/* The main header section on top of the screen */}
+
+                { isHome ? (
+                    <header className="header-home">
+                    <div className="header-wrapper">
+                        <div>
+                            <div className="header-image">
+                                <img src="http://polinakocheva.com/assets/me-crop.jpg" />
+                            </div>
+                            <Link to="/" className="header-title">Polina Kocheva</Link>
+                        </div>
+                        <div className="header-description">
+                            <div>
+                                <h1>Hi 👋 I am a <strong>front-end developer</strong>.</h1>
+                                <h2>I <a href="/work/">work</a> remotely from my home in Barcelona or coworking spaces around the world. I love to <a href="/tag/travel/">travel</a> and my lifestyle is semi-nomadic. I also like to <a href="/art/">paint</a>.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                ) : ( 
+                    <div></div> 
+                )}
+                {/*
                 <header className="site-head">
                     <div className="container">
                         <div className="site-mast">
@@ -59,7 +84,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             null}
                         <nav className="site-nav">
                             <div className="site-nav-left">
+                */}
+
                                 {/* The navigation items as setup in Ghost */}
+                {/*}
                                 <Navigation data={site.navigation} navClass="site-nav-item" />
                             </div>
                             <div className="site-nav-right">
@@ -68,6 +96,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         </nav>
                     </div>
                 </header>
+                */}
+                
+                
 
                 <main className="site-main">
                     {/* All the main content gets inserted here, index.js, post.js */}
