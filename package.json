@@ -54,6 +54,8 @@
     "lodash": "4.17.11",
     "react": "16.8.4",
     "react-dom": "16.8.4",
-    "react-helmet": "5.2.0"
+    "react-helmet": "5.2.0",
+    "react-simple-maps": "^0.12.1",
+    "react-tooltip": "^3.10.0"
   }
 }

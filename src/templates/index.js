@@ -37,7 +37,15 @@ const Index = ({ data, location, pageContext }) => {
                     </div>
 
                     <HomeLinks />
+                    <div class="home-section home-box big-box">
+                    <h2 class="home-title">On the map</h2>
+                    <p>
+                        Some of the places that I've travelled to / lived in. <br />
+                    </p>
+                    </div>
+
                     <HomeMap />
+                    {/* 
                 
                     <section className="post-feed">
                         {posts.map(({ node }) => (
@@ -45,6 +53,8 @@ const Index = ({ data, location, pageContext }) => {
                             <PostCard key={node.id} post={node} />
                         ))}
                     </section>
+                    */}
+
                     {/* <Pagination pageContext={pageContext} /> */}
                 </div>
             </Layout>
