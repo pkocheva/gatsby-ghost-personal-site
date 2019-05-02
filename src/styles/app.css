@@ -599,9 +599,8 @@ p {
 }
 
 .post-full-content {
-    max-width: 720px;
+    max-width: 960px;
     margin: 0 auto;
-    background: #fff;
 }
 
 .post-feature-image img {
@@ -713,6 +712,8 @@ p {
     color: #fff;
     border-radius: 12px;
 }
+
+
 
 /* Header
 /* ---------------------------------------------------------- */
@@ -1408,7 +1409,7 @@ a.post-card-content-link:hover {
 
 .tag-header {
     max-width: 690px;
-    margin: 0 0 4vw;
+    margin: 0;
 }
 
 .tag-header h1 {
@@ -1815,10 +1816,6 @@ a.post-card-content-link:hover {
     filter: saturate(1);
 }
 
-.outer {
-    /* padding: 4rem 4vw 0 4vw; */
-}
-
 .reading-time {
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -1828,4 +1825,137 @@ a.post-card-content-link:hover {
     font-weight: 500;
     letter-spacing: .5px;
     text-transform: uppercase;
+}
+
+.site-head {
+    background: none;
+}
+
+.site-nav {
+    justify-content: flex-start;
+    align-items: center;
+    height: 4rem;
+}
+
+.site-nav  .header-title {
+    margin-top: 10px;
+}
+
+.site-nav .header-image img {
+    width: auto;
+    max-width: 4rem;
+    margin-right: 2rem;
+}
+
+.site-nav  .header-image {
+    margin: 0;
+}
+
+.content-title,
+.tag-header h1,
+.site-main h1 {
+    color: #090a0b;
+    font-family: Poppins;
+    font-size: 7rem;
+}
+
+.content p {
+    color: #363949;
+    font-family: 'PT serif';
+    font-size: 2.5rem;
+}
+
+.content p:first-child {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.content-body h2 {
+    color: #090a0b;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+}
+
+figcaption {
+    margin: 1em 0 0;
+    font-size: 2rem;
+    line-height: 1.6em;
+    text-align: center;
+    font-family: Open Sans;
+    color: #738a94;
+    font-weight: 300;
+}
+
+.header-wrapper {
+    margin-top: 0;
+}
+
+
+.home-tools {
+    text-align: left;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home-tools a {
+    color: #fff;
+    border: none;
+}
+
+.home-tool {
+    padding: 1.5rem 3rem;
+    border-radius: 0.5rem;
+    transition: .25s;
+    margin-right: 0.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.home-tool:hover {
+    opacity: 1 !important;
+}
+
+.home-tools-imgs img {
+    width: 100px;   
+    height: 50px;
+    object-fit: contain;
+    margin: 4rem 1rem 1rem 0;
+    filter: saturate(0);
+    transition: 0.5s;
+}
+
+.tools-wrap {
+    min-height: 100px;
+}
+
+.home-tools-imgs img:hover {
+    filter: saturate(1);
+}
+
+
+/* Gallery hack */
+
+.kg-gallery-image {
+    flex: 0.75 1 0%;
+    margin: 0 1rem;
+}
+
+.kg-gallery-container {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100vw;
+}
+
+.kg-gallery-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.kg-gallery-image img {
+    height: auto;
 }
