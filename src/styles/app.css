@@ -1527,35 +1527,97 @@ a.post-card-content-link:hover {
 /* Footer
 /* ---------------------------------------------------------- */
 
-.site-foot {
-    padding: 20px 0 40px 0;
+.site-footer {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    color: #fff;
+    background: color(var(--darkgrey) l(-15%));
+    background: #181949;
+}
+
+.site-footer-content {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; */
     color: rgba(255,255,255,0.7);
     font-size: 1.3rem;
-    background: var(--color-base);
+    text-align: center;
+    padding-top: 4rem;
 }
 
-.site-foot-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.site-foot-nav a {
+.site-footer-content a {
     color: rgba(255,255,255,0.7);
 }
 
-.site-foot-nav a:hover {
-    text-decoration: none;
+.site-footer-content a:hover {
     color: rgba(255,255,255,1);
+    text-decoration: none;
 }
 
-.site-foot-nav-right a {
-    display: inline-block;
-    padding: 2px 5px;
+.site-footer-content p {
+    font-size: 2rem;
 }
 
-.site-foot-nav-right a:last-child {
-    padding-right: 0;
+.site-footer-content a {
+    border: none;
+}
+
+.site-footer-content a:hover {
+    background: none;
+}
+
+.site-footer-content svg {
+    margin: 0 1rem;
+    transition: 0.2s;
+}
+
+.site-footer-content svg:hover {
+    transform: scale(1.15);
+
+}
+
+
+.site-footer-nav {
+    display: flex;
+}
+
+.site-footer-nav a {
+    position: relative;
+    margin-left: 20px;
+}
+
+.site-footer-nav a:before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -11px;
+    display: block;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 100%;
+}
+
+.site-footer-nav a:first-of-type:before {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .site-footer-content {
+        flex-direction: column;
+    }
+    .site-footer-nav a:first-child {
+        margin-left: 0;
+    }
+}
+
+.page-work h1,
+.page-art h1 {
+    color: #090a0b;
+    text-align: center;
+    margin: 3rem 0 5rem 0;
 }
 
 
@@ -1754,7 +1816,7 @@ a.post-card-content-link:hover {
 }
 
 .outer {
-    padding: 4rem 4vw 0 4vw;
+    /* padding: 4rem 4vw 0 4vw; */
 }
 
 .reading-time {
