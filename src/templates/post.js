@@ -47,7 +47,7 @@ const Post = ({ data, location }) => {
                             <h1 class="post-full-title">{{title}}</h1>
                         </header>
                         */}
-                
+                            <h1 class="post-full-title">{ post.title }</h1>
                             { post.feature_image ?
                                 <figure className="post-feature-image">
                                     <img src={ post.feature_image } alt={ post.title } />
