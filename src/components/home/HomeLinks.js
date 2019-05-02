@@ -18,7 +18,7 @@ const HomeLinks = () => {
                 <a href="/art/">
                     <div className="home-links-art">🎨<br />Art</div>
                 </a>
-                <div className="home-links-projects" data-tippy="<p>Coming soon</p>" data-tippy-arrow="true">💡<br />Projects</div>
+                <div className="home-links-projects" data-tip="Coming soon">💡<br />Projects</div>
             </div>
         </div>
     )
