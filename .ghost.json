@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "http://polinakocheva.com",
+    "apiUrl": "http://46.101.50.146",
     "contentApiKey": "873653aafb0215a8b97bbf68b5"
   },
   "production": {
-    "apiUrl": "http://polinakocheva.com",
+    "apiUrl": "http://46.101.50.146",
     "contentApiKey": "873653aafb0215a8b97bbf68b5"
   }
 }
