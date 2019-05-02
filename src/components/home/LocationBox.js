@@ -17,7 +17,6 @@ class LocationBox extends Component {
 
     componentDidMount() {
         axios.get('https://nomadlist.com/@polinakocheva.json').then(res => {
-            console.log(res.data);
 
             if(res.data.location.now.city && res.data.location.now.country) {
                 this.setState ({
