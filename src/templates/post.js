@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
@@ -14,6 +14,18 @@ import { MetaData } from '../components/common/meta'
 const Post = ({ data, location }) => {
     const post = data.ghostPost
 
+    // JS from Casper to make galleries work
+    useEffect(() => {
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        })
+      });
+
     return (
             <>
                 <MetaData
@@ -24,12 +36,24 @@ const Post = ({ data, location }) => {
                 <Layout>
                     <div className="container">
                         <article className="content">
+
+                        {/* 
+                        <header class="post-full-header">
+                            <section class="post-full-meta">
+                                {{#primary_tag}}
+                                    <a href="{{url}}">{{name}}</a>
+                                {{/primary_tag}}
+                            </section>
+                            <h1 class="post-full-title">{{title}}</h1>
+                        </header>
+                        */}
+                
                             { post.feature_image ?
                                 <figure className="post-feature-image">
                                     <img src={ post.feature_image } alt={ post.title } />
                                 </figure> : null }
                             <section className="post-full-content">
-                                <h1 className="content-title">{post.title}</h1>
+                                
 
                                 {/* The main post content */ }
                                 <section
