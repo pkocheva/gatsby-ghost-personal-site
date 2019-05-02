@@ -50,13 +50,27 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         <div className="header-description">
                             <div>
                                 <h1>Hi 👋 I am a <strong>front-end developer</strong>.</h1>
-                                <h2>I <a href="/work/">work</a> remotely from my home in Barcelona or coworking spaces around the world. I love to <a href="/tag/travel/">travel</a> and my lifestyle is semi-nomadic. I also like to <a href="/art/">paint</a>.</h2>
+                                <h2>I <Link to="/work/">work</Link> remotely from my home in Barcelona or coworking spaces around the world. I love to <Link to="/tag/travel/">travel</Link> and my lifestyle is semi-nomadic.<br />&nbsp;</h2>
                             </div>
                         </div>
                     </div>
                 </header>
                 ) : ( 
-                    <div></div> 
+                    <header className="site-head">
+                        <div className="container">
+
+                        <nav className="site-nav">
+                            <div className="header-image">
+                                <img src="http://polinakocheva.com/assets/me-crop.jpg" />
+                            </div>
+                           
+                            <Link to="/" className="header-title">Polina Kocheva</Link>
+                            
+                            {/* <Navigation data={site.navigation} navClass="site-nav-item" /> */}
+
+                            </nav>
+                        </div>
+                    </header>
                 )}
                 {/*
                 <header className="site-head">
@@ -88,7 +102,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                                 {/* The navigation items as setup in Ghost */}
                 {/*}
-                                <Navigation data={site.navigation} navClass="site-nav-item" />
+                            <Navigation data={site.navigation} navClass="site-nav-item" />
                             </div>
                             <div className="site-nav-right">
                                 <Link className="site-nav-button" to="/about">About</Link>
