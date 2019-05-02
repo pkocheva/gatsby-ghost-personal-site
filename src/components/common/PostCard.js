@@ -25,7 +25,7 @@ const PostCard = ({ post }) => {
             
                 <h2 className="post-card-title">{post.title}</h2>
                 </header>
-                <section className="post-card-excerpt">{post.excerpt}</section>
+                <section className="post-card-excerpt">{post.excerpt.substr(0,140) + '...'}</section>
                 </Link>
             </div>
 
