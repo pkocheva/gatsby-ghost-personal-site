@@ -16,7 +16,7 @@ const HomeLinks = () => {
                     <div className="home-links-travel">✈️<br />Travel</div>
                 </Link>
                 <Link to="/art/">
-                    <div className="home-links-art">🎨<br />Art</div>
+                    <div className="home-links-art" data-tip="Coming soon">🎨<br />Art</div>
                 </Link>
                 <div className="home-links-projects" data-tip="Coming soon">💡<br />Projects</div>
             </div>
