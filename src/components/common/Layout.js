@@ -61,7 +61,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                         <nav className="site-nav">
                             <div className="header-image">
-                                <img src="http://polinakocheva.com/assets/me-crop.jpg" />
+                                <img src="/images/me-crop.jpg" />
                             </div>
                            
                             <Link to="/" className="header-title">Polina Kocheva</Link>
