@@ -72,3 +72,6 @@ typings/
 .cache/
 public
 yarn-error.log
+
+# Others
+todo

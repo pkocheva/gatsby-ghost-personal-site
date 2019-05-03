@@ -1115,7 +1115,7 @@ a.subscribe-button:hover {
 /* ---------------------------------------------------------- */
 
 .site-main {
-    padding: 4vw 0;
+    padding: 4vw;
 }
 
 /* Index
@@ -1835,6 +1835,7 @@ a.post-card-content-link:hover {
     justify-content: flex-start;
     align-items: center;
     height: 4rem;
+    padding: 0 4vw;
 }
 
 .site-nav  .header-title {
@@ -1932,7 +1933,7 @@ figcaption {
 }
 
 
-/* Gallery hack */
+/* Galleries from Casper */
 
 .kg-gallery-image {
     flex: 0.75 1 0%;
@@ -1958,4 +1959,22 @@ figcaption {
 
 .kg-gallery-image img {
     height: auto;
+}
+
+
+@media (max-width: 650px) {
+
+    .header-wrapper,
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-description {
+        text-align: center;
+    }
+
+    .home-links div {
+        margin-bottom: 2rem;
+    }
+
 }
