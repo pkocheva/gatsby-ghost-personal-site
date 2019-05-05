@@ -73,5 +73,8 @@ typings/
 public
 yarn-error.log
 
+# Environment variables
+.env.development
+
 # Others
 todo

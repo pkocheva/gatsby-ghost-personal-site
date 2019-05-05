@@ -1,10 +1,26 @@
+require('dotenv').config({path: `./.env`});
 const path = require(`path`)
 
 const config = require(`./src/utils/siteConfig`)
 const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
 
-let ghostConfig
+let ghostConfig = {
+    "development": {
+      "apiUrl": "http://46.101.50.146",
+      "contentApiKey": process.env.GHOST_CONTENT_API_KEY
+    },
+    "production": {
+      "apiUrl": "http://46.101.50.146",
+      "contentApiKey": process.env.GHOST_CONTENT_API_KEY
+    }
+  }
+  const { apiUrl, contentApiKey } = process.env.NODE_ENV === `development` ? ghostConfig.development : ghostConfig.production
 
+  if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
+      throw new Error(`GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`) // eslint-disable-line
+  }
+
+/*
 try {
     ghostConfig = require(`./.ghost`)
 } catch (e) {
@@ -19,8 +35,9 @@ try {
 
     if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
         throw new Error(`GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`) // eslint-disable-line
-    }
+    }    
 }
+*/
 
 /**
 * This is the place where you can tell Gatsby which plugins to use
