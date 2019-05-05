@@ -181,7 +181,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </svg>
                             </a>
                         </p>
-                        <p>Site made with <a href="https://github.com/gatsbyjs/gatsby">Gatsby</a> and <a href="https://github.com/TryGhost" target="_blank">Ghost</a> on <a href="https://netlify.com" target="_blank">Netlify</a> and <a href="https://digitalocean.com" target="_blank">Digital Ocean</a>. View source.</p>              
+                        <p>Site made with <a href="https://github.com/gatsbyjs/gatsby">Gatsby</a> and <a href="https://github.com/TryGhost" target="_blank">Ghost</a> on <a href="https://netlify.com" target="_blank">Netlify</a> and <a href="https://digitalocean.com" target="_blank">Digital Ocean</a>. <br /> <a href="https://github.com/pkocheva/gatsby-ghost-personal-site" target="_blank">View source.</a></p>              
                         
                         
 
