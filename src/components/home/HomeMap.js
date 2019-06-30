@@ -33,6 +33,7 @@ const wrapperStyles = {
     { markerOffset: 25, name: "Florianopolis", coordinates: [-48.7504785, -27.5713143] },
     { markerOffset: 25, name: "Rio de Janeiro", coordinates: [-43.7261797, -22.9132525] },
     { markerOffset: 25, name: "Patagonia", coordinates: [-72.8894098, -49.3294885] },
+    { markerOffset: 25, name: "Taipei", coordinates: [120.9605, 23.6978] },
   ]
   
   class HomeMap extends Component {
