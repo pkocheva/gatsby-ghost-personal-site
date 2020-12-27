@@ -107,13 +107,15 @@ class HomeMap extends Component {
                       stroke: hasPost ? '#d659ae' : '#8170c2',
                       strokeWidth: 3,
                       opacity: 0.9,
-                      data-tip={name}
-                      />
-                      </Link>
-                    </Marker>
-                  ))}
+                    }}
+                    data-tip={name}
 
-{/* 
+                  />
+                </Link>
+              </Marker>
+            ))}
+
+            {/* 
 
             <Markers>
               {markers.map((marker, i) => (
