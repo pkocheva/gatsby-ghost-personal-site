@@ -2,8 +2,10 @@ import React, { Component } from "react"
 import { Link } from 'gatsby'
 import {
   ComposableMap,
+  ZoomableGroup,
   Geographies,
   Geography,
+  Markers,
   Marker,
 } from "react-simple-maps"
 
