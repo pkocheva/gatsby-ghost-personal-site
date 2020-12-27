@@ -6,10 +6,10 @@ import { Layout } from '../components/common'
 const WorkPage = () => (
     <Layout>
         <div className="container">
-            <h1>Work</h1>
             <div className="home-section" style={{ paddingTop: '0' }}>
                 <div className="tools-wrap">
                     <div id="tools-dev" className="home-tools-imgs">
+                        <h1>Work</h1>
                         <img alt="Angular" src="/images/angular.png" />
                         <img alt="Typescript" src="/images/typescript.png" />
                         {/* <img alt="React" src="/images/react.png" /> */}
