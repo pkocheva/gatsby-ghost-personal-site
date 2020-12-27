@@ -30,7 +30,7 @@ const Index = ({ data, location, pageContext }) => {
                         <div className="home-box">
                             <h2 className="home-title">Recent Posts</h2>
 
-                            {posts.slice(0, 5).map(({ node }) => (
+                            {posts.slice(0, 3).map(({ node }) => (
                                     <HomePost key={node.id} post={node} /> 
                                 ))}
                         </div>
@@ -38,9 +38,11 @@ const Index = ({ data, location, pageContext }) => {
 
                     <HomeLinks />
                     <div class="home-section home-box big-box">
-                    <h2 class="home-title">On the map</h2>
+                    <h2 class="home-title">My map</h2>
                     <p>
-                        Some of the places that I've travelled to / lived in. <br />
+                        Some of the places that I've travelled to / lived in.
+                    <br />
+                        The <span className="pink">pink</span> ones link to blog posts about the place - click to read!
                     </p>
                     </div>
 

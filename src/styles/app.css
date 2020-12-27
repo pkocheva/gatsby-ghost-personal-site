@@ -1668,12 +1668,17 @@ a.post-card-content-link:hover {
 
 .home-title {
     text-align: left;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 2rem;
+    font-weight: 300;
+    font-size: 4rem;
     font-family: poppins, sans-serif;
     letter-spacing: 0.1rem;
     color: #1d3195;
+}
+
+.home-title.location-box-title{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .home-post {
@@ -2005,4 +2010,11 @@ figcaption {
     .home-links div {
         margin-bottom: 2rem;
     }
+}
+
+.pink {
+    font-weight: 600;
+    color: #d659ae;
+    font-size: 2.25rem;
+    letter-spacing: 0.1rem;
 }
