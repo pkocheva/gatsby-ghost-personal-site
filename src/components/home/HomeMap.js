@@ -37,6 +37,7 @@ const markers = [
   { markerOffset: 25, name: "Tokyo", coordinates: [139.6503, 35.6762] },
   { markerOffset: 25, name: "Osaka", coordinates: [135.5023, 34.6937] },
   { markerOffset: 25, name: "Krabi", coordinates: [98.9063, 8.0855] },
+  { markerOffset: 25, name: "Lisbon", coordinates: [-9.1393, 38.7223] },
 ]
 
 class HomeMap extends Component {
