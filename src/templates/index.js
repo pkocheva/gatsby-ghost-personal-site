@@ -2,8 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import { Layout, PostCard, Pagination } from '../components/common'
-import { HomePost, LocationBox, HomeLinks, HomeMap } from '../components/home'
+import { Layout } from '../components/common'
+import HomeMap from '../components/home/HomeMap'
+import HomePost from '../components/home/HomePost'
+import LocationBox from '../components/home/LocationBox'
+import HomeLinks from '../components/home/HomeLinks'
 import { MetaData } from '../components/common/meta'
 
 /**
