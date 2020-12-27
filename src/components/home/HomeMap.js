@@ -88,6 +88,8 @@ class HomeMap extends Component {
                 )
               }
             </Geographies>
+
+            {/* 
             {markers.map(({ name, link, hasPost, coordinates, markerOffset }) => (
               <Marker
                 key={name}
@@ -114,36 +116,36 @@ class HomeMap extends Component {
                 </Link>
               </Marker>
             ))}
-
-            {/* 
+            */}
 
             <Markers>
               {markers.map((marker, i) => (
-                      <Marker
-                        key={i}
-                        marker={marker}
-                        style={{
-                          default: { fill: "#FF5722" },
-                          hover: { fill: "#FFFFFF" },
-                          pressed: { fill: "#FF5722" },
-                        }}
-                      >
-                        <circle
-                          cx={0}
-                          cy={0}
-                          r={5}
-                          style={{
-                            fill: '#d659ae',
-                            stroke: "#d659ae",
-                            strokeWidth: 3,
-                            opacity: 0.9,
-                          }}
-                          data-tip={marker.name}
-                        />
-                      </Marker>
-                    ))}
+                <Marker
+                  key={i}
+                  marker={marker}
+                  style={{
+                    default: { fill: "#FF5722" },
+                    hover: { fill: "#FFFFFF" },
+                    pressed: { fill: "#FF5722" },
+                  }}
+                ><Link to={marker.link} data-tip={marker.name}>
+                    <circle
+                      cx={0}
+                      cy={0}
+                      r={5}
+                      style={{
+                        fill: marker.hasPost ? '#d659ae' : '#8170c2',
+                        stroke: marker.hasPost ? '#d659ae' : '#8170c2',
+                        strokeWidth: 3,
+                        opacity: 0.9,
+                      }}
+                      data-tip={marker.name}
+                    />
+                  </Link>
+                </Marker>
+              ))}
             </Markers>
-            */}
+
           </ZoomableGroup>
         </ComposableMap>
       </div>
