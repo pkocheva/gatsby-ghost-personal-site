@@ -27,7 +27,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     <>
         
         <Helmet>
-            <html lang={site?.lang} />
+            <html lang={site.lang} />
             <body className={bodyClass} />
         </Helmet>
         
