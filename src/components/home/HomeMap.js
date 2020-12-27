@@ -53,12 +53,12 @@ class HomeMap extends Component {
             width: "100%",
             height: "auto",
           }}
-          >
-          <ZoomableGroup center={[0,20    ]} disablePanning>
+        >
+          <ZoomableGroup center={[0, 20]} disablePanning>
             <Geographies geography="./world-50m.json">
               {(geographies, projection) =>
                 geographies.map((geography, i) =>
-                geography.id !== "ATA" && (
+                  geography.id !== "ATA" && (
                     <Geography
                       key={i}
                       geography={geography}
@@ -88,32 +88,60 @@ class HomeMap extends Component {
                 )
               }
             </Geographies>
-            <Markers>
-              {markers.map((marker, i) => (
-                <Marker
-                  key={i}
-                  marker={marker}
-                  style={{
-                    default: { fill: "#FF5722" },
-                    hover: { fill: "#FFFFFF" },
-                    pressed: { fill: "#FF5722" },
-                  }}
-                  >
+            {markers.map(({ name, link, hasPost, coordinates, markerOffset }) => (
+              <Marker
+                key={name}
+                coordinates={coordinates}
+                style={{
+                  default: { fill: "#FF5722" },
+                  hover: { fill: "#FFFFFF" },
+                  pressed: { fill: "#FF5722" },
+                }}>
+                <Link to={link} data-tip={name}>
                   <circle
                     cx={0}
                     cy={0}
                     r={5}
                     style={{
-                      fill: '#d659ae',
-                      stroke: "#d659ae",
+                      fill: hasPost ? '#d659ae' : '#8170c2',
+                      stroke: hasPost ? '#d659ae' : '#8170c2',
                       strokeWidth: 3,
                       opacity: 0.9,
-                    }}
-                    data-tip={marker.name}
-                  />
-                </Marker>
-              ))}
+                      data-tip={name}
+                      />
+                      </Link>
+                    </Marker>
+                  ))}
+
+{/* 
+
+            <Markers>
+              {markers.map((marker, i) => (
+                      <Marker
+                        key={i}
+                        marker={marker}
+                        style={{
+                          default: { fill: "#FF5722" },
+                          hover: { fill: "#FFFFFF" },
+                          pressed: { fill: "#FF5722" },
+                        }}
+                      >
+                        <circle
+                          cx={0}
+                          cy={0}
+                          r={5}
+                          style={{
+                            fill: '#d659ae',
+                            stroke: "#d659ae",
+                            strokeWidth: 3,
+                            opacity: 0.9,
+                          }}
+                          data-tip={marker.name}
+                        />
+                      </Marker>
+                    ))}
             </Markers>
+            */}
           </ZoomableGroup>
         </ComposableMap>
       </div>
