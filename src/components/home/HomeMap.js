@@ -54,7 +54,7 @@ class HomeMap extends Component {
             height: "auto",
           }}
         >
-          
+          <ZoomableGroup center={[0, 20]} disablePanning>
             <Geographies geography="./world-50m.json">
               {(geographies, projection) =>
                 geographies.map((geography, i) =>
@@ -151,7 +151,7 @@ class HomeMap extends Component {
                 </Marker>
               ))}
             </Markers>
-
+            </ZoomableGroup>
          
         </ComposableMap>
       </div>
