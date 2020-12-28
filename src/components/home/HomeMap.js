@@ -171,7 +171,7 @@ class HomeMap extends Component {
                     hover: { fill: "#FFFFFF" },
                     pressed: { fill: "#FF5722" },
                   }}
-                ><Link to={marker.link} data-tip={marker.name}>
+                ><a href={marker.link} data-tip={marker.name}>
                     <circle
                       cx={0}
                       cy={0}
@@ -184,7 +184,7 @@ class HomeMap extends Component {
                       }}
                       data-tip={marker.name}
                     />
-                  </Link>
+                  </a>
                 </Marker>
               ))}
             </Markers>
