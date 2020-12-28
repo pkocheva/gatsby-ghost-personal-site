@@ -54,7 +54,7 @@ class HomeMap extends Component {
             height: "auto",
           }}
         >
-          <ZoomableGroup center={[0, 20]} disablePanning>
+          
             <Geographies geography="./world-50m.json">
               {(geographies, projection) =>
                 geographies.map((geography, i) =>
@@ -89,6 +89,10 @@ class HomeMap extends Component {
               }
             </Geographies>
 
+            {/* TODO: find out why the below is happening? (probably different versions on smth) */}
+
+            {/* This builds locally, but fails when pushed to Netlify */}
+
             {/* 
             {markers.map(({ name, link, hasPost, coordinates, markerOffset }) => (
               <Marker
@@ -118,6 +122,8 @@ class HomeMap extends Component {
             ))}
             */}
 
+            {/* This builds when pushed to Netlify, but gatsby build fails locally (but gatsby develop works)  */}
+
             <Markers>
               {markers.map((marker, i) => (
                 <Marker
@@ -146,7 +152,7 @@ class HomeMap extends Component {
               ))}
             </Markers>
 
-          </ZoomableGroup>
+         
         </ComposableMap>
       </div>
     )
