@@ -50,6 +50,8 @@ class HomeMap extends Component {
 
         {/* This builds locally, but fails when pushed to Netlify */}
 
+        {/* 
+
         <ComposableMap
           projectionConfig={{ scale: 190 }}
           width={1000}
@@ -112,9 +114,9 @@ class HomeMap extends Component {
           ))}
         </ComposableMap>  
 
-        {/* This builds when pushed to Netlify, but gatsby build fails locally (but gatsby develop works)  */}
+        */}
 
-        {/* 
+        {/* This builds when pushed to Netlify, but gatsby build fails locally (but gatsby develop works)  */}
 
         <ComposableMap
           projectionConfig={{ scale: 200 }}
@@ -189,7 +191,7 @@ class HomeMap extends Component {
           </ZoomableGroup>
 
         </ComposableMap>
-        */}
+        
       </div>
     )
   }
