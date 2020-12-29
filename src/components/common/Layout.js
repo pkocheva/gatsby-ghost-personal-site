@@ -43,7 +43,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <div className="header-wrapper">
                         <div>
                             <div className="header-image">
-                                <img src="/images/me-crop.jpg" />
+                                <div className="header-image-wrap"><img src="/images/me.jpg" /></div>
                             </div>
                             <Link to="/" className="header-title">Polina Kocheva</Link>
                         </div>
@@ -61,7 +61,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                         <nav className="site-nav">
                             <div className="header-image">
-                                <img src="/images/me-crop.jpg" />
+                                <div className="header-image-wrap"><img src="/images/me.jpg" /></div>
                             </div>
                            
                             <Link to="/" className="header-title">Polina Kocheva</Link>
