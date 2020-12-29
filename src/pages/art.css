@@ -1,11 +1,10 @@
 .Feed {
     margin: auto;
-    padding: 1% 1%
 }
 
 .Feed a {
     display: inline-block;
-    margin: 1% 1%;
+    margin: 1% 2% 1% 0
     width: 23%;
     line-height: 0
 }
