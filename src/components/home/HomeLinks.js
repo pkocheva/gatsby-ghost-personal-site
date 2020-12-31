@@ -15,9 +15,9 @@ const HomeLinks = () => {
                 <Link to="/tag/travel/">
                     <div className="home-links-travel">✈️<br />Travel</div>
                 </Link>
-                <a href="https://www.instagram.com/pbk_art/" target="_blank">
+                <Link to="/art/">
                     <div className="home-links-art">🎨<br />Art</div>
-                </a>
+                </Link>
                 <div className="home-links-projects" data-tip="Coming soon">💡<br />Projects</div>
             </div>
         </div>

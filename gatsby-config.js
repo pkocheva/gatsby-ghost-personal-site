@@ -6,11 +6,11 @@ const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
 
 let ghostConfig = {
     "development": {
-      "apiUrl": "http://46.101.50.146",
+      "apiUrl": "https://polinakocheva.stream",
       "contentApiKey": process.env.GHOST_CONTENT_API_KEY
     },
     "production": {
-      "apiUrl": "http://46.101.50.146",
+      "apiUrl": "https://polinakocheva.stream",
       "contentApiKey": process.env.GHOST_CONTENT_API_KEY
     }
   }
