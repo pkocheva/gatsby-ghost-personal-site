@@ -817,15 +817,16 @@ p {
 
 .header-home:after {
     content: "";
-    height: 6rem;
     display: block;
     transform: rotate(-2deg);
     background: #fff;
     z-index: 999;
     position: relative;
-    top: 24px;
     margin-top: -36px;
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.03);
+    height: 8rem;
+    width: 105vw;
+    top: 29px;
+    left: -4px;
 }
 
 .header-wrapper {
@@ -1666,6 +1667,9 @@ a.post-card-content-link:hover {
     }
 }
 
+/* Homepage
+/* ---------------------------------------------------------- */
+
 .home-title {
     text-align: left;
     font-weight: 300;
@@ -1675,7 +1679,7 @@ a.post-card-content-link:hover {
     color: #1d3195;
 }
 
-.home-title.location-box-title{
+.home-title.location-box-title {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 2rem;
@@ -2017,4 +2021,141 @@ figcaption {
     color: #d659ae;
     font-size: 2.25rem;
     letter-spacing: 0.1rem;
+}
+
+.__react_component_tooltip.type-dark {
+    color: #fff;
+    background-color: hsl(317 25% 35% / 1) !important;
+}
+
+.__react_component_tooltip.type-dark.place-top:after {
+    border-top-color: hsl(317 25% 35% / 1) !important;
+}
+
+/* Dark mode
+/* ---------------------------------------------------------- */
+body.dark {
+    background: hsl(244 33% 8% / 1);
+}
+
+.dark h2 {
+    color: hsl(242 25% 50% / 1);
+}
+
+.dark .header-home {
+    background: hsl(240 75% 7% / 1);
+}
+
+.dark .header-home:after {
+    background: #040420;
+}
+
+.dark .header-description h1 {
+    color: hsl(242 75% 85% / 1);
+}
+
+.dark .home-title {
+    color: hsl(241deg 40% 50%);
+}
+
+.dark .home-links div {
+    background: #121122;
+}
+
+.dark .content p {
+    color: #b8a9be;
+}
+
+.dark .content-title,
+.dark .site-main h1,
+.dark .tag-header h1 {
+    color: #a465e4;
+}
+
+.dark .location-box-inner {
+    background: transparent;
+    border: 1px solid hsl(241 50% 30% / 1);
+}
+
+.dark .location-box-inner svg {
+    background: hsl(241 50% 30% / 1);
+}
+
+.dark path.rsm-geography {
+    fill: #000 !important;
+    stroke: rgb(65 64 146) !important;
+}
+
+.dark .post-card {
+    background: transparent;
+    border: 1px solid hsl(241 50% 30% / 1);
+}
+
+.dark .post-card-title {
+    color: hsl(268 80% 75% / 1);
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.darkModeToggle {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+
+/* Hide the input */
+input[type="checkbox"]#darkModeToggle {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.check-trail {
+    display: flex;
+    align-items: center;
+    width: 6em;height: 3.5em;
+    background: #fff;
+    border-radius: 2.5em;
+    transition: all 0.5s ease 0s;
+    cursor: pointer;
+    border: 2px solid #8d64e6;
+}
+
+.check-handler {
+    display: flex;
+    margin-left: 0.5em;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
+    background: #8d64e6;
+    border-radius: 50%;
+    transition: all 0.5s ease 0s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px;
+}
+
+.check-handler::before {
+    content: "☀";
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+input[type="checkbox"]:checked + .check-trail {
+    background: hsl(240 78% 10% / 1);
+}
+
+input[type="checkbox"]:checked + .check-trail .check-handler {
+    margin-left: 50%;
+    background: rgb(130 100 230);
+}
+
+.check-handler:before,
+input[type="checkbox"]:checked + .check-trail .check-handler::before {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Capa_1' x='0px' y='0px' viewBox='0 0 312.812 312.812' style='enable-background:new 0 0 312.812 312.812;' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23fff' d='M305.2,178.159c-3.2-0.8-6.4,0-9.2,2c-10.4,8.8-22.4,16-35.6,20.8c-12.4,4.8-26,7.2-40.4,7.2c-32.4,0-62-13.2-83.2-34.4 c-21.2-21.2-34.4-50.8-34.4-83.2c0-13.6,2.4-26.8,6.4-38.8c4.4-12.8,10.8-24.4,19.2-34.4c3.6-4.4,2.8-10.8-1.6-14.4 c-2.8-2-6-2.8-9.2-2c-34,9.2-63.6,29.6-84.8,56.8c-20.4,26.8-32.4,60-32.4,96c0,43.6,17.6,83.2,46.4,112s68,46.4,112,46.4 c36.8,0,70.8-12.8,98-34c27.6-21.6,47.6-52.4,56-87.6C314,184.959,310.8,179.359,305.2,178.159z'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E");
 }
