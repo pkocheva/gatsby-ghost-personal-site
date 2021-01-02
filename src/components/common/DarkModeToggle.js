@@ -25,13 +25,15 @@ class DarkModeToggle extends Component {
     }
 
     componentDidMount() {
+        console.log('mount')
 
         const localStorageDarkMode = window.localStorage.getItem('darkmode');
 
         if (localStorageDarkMode) {
 
             if (localStorageDarkMode === 'true') {
-                document.body.classList.add('dark');
+                console.log('ADD DARK')
+                setTimeout(() => document.body.classList.add('dark'), 100);
             }
 
             this.setState({
@@ -40,6 +42,7 @@ class DarkModeToggle extends Component {
                 document.getElementById("darkModeToggle").checked = this.state.darkModeOn
             });
         }
+        
 
     }
 
