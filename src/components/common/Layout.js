@@ -24,6 +24,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
     const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
 
+    if(window.localStorage.getItem('darkmode') === 'true') document.body.classList.add('dark');
 
 
     return (
@@ -31,7 +32,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
             <Helmet>
                 <html lang={site.lang} />
-                <body className={window.localStorage.getItem('darkmode') === 'true' ? 'dark' : ''} />
+                <body className={''} />
             </Helmet>
 
 
