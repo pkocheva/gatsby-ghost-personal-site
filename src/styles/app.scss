@@ -233,11 +233,15 @@ input[type="checkbox"]:checked + .check-trail:hover .check-handler {
 .content p {
     font-family: var(--font-main);
     font-size: 2.5rem;
-
-    p:first-child {
+    :first-child {
         font-size: 1.5em;
         line-height: 1.5em;
     }
+}
+
+.content p:first-child {
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 .content-body h2 {
