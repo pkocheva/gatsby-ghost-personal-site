@@ -18,7 +18,7 @@ what's here to work the way you'd like it to.
 
 */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Poppins|PT+Serif|Galada");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Poppins|Martel+Sans|Galada");
 
 /* Variables
 /* ---------------------------------------------------------- */
@@ -32,6 +32,7 @@ what's here to work the way you'd like it to.
     --color-bg: #f5f5f5;
 
     /* Fonts */
+    --font-main: "Martel Sans";
     --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
@@ -522,11 +523,7 @@ html {
 }
 
 body {
-    background: #181949;
-    background: #f9fbfb;
-    color: #668fcc;
-    color: #667ae1;
-    font-family: "Open Sans";
+    font-family: var(--font-main);
 }
 
 a:not(.header-title) {
@@ -840,7 +837,7 @@ p {
 .header-description {
     display: flex;
     align-items: flex-end;
-    font-family: "Poppins";
+    font-family: var(--font-main);
     padding: 0 5rem;
 }
 
@@ -1674,7 +1671,7 @@ a.post-card-content-link:hover {
     text-align: left;
     font-weight: 300;
     font-size: 4rem;
-    font-family: poppins, sans-serif;
+    font-family: var(--font-main), sans-serif;
     letter-spacing: 0.1rem;
     color: #1d3195;
 }
@@ -1897,13 +1894,13 @@ a.post-card-content-link:hover {
 .tag-header h1,
 .site-main h1 {
     color: #090a0b;
-    font-family: Poppins;
+    font-family: var(--font-main);
     font-size: 7rem;
 }
 
 .content p {
     color: #363949;
-    font-family: "PT serif";
+    font-family: var(--font-main);
     font-size: 2.5rem;
 }
 
@@ -1923,7 +1920,7 @@ figcaption {
     font-size: 2rem;
     line-height: 1.6em;
     text-align: center;
-    font-family: Open Sans;
+    font-family: var(--font-main);
     color: #738a94;
     font-weight: 300;
 }

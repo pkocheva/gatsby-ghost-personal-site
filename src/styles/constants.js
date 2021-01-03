@@ -8,7 +8,7 @@ export const COLORS = {
         dark: 'hsl(242 75% 7% / 1)' // dark navy
     },
     text: {
-        light: 'hsl(242 15% 25% / 1)', // grey
+        light: 'hsl(242 15% 7% / 1)', // grey
         dark: 'hsl(282 15% 70% / 1)' // very light pink
     },
     title: {
