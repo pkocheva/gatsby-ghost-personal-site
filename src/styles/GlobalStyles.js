@@ -60,7 +60,7 @@ path.rsm-geography {
 }
 
 .post-card-title {
-    color: var(--color-small-title-dark);
+    color: var(--color-smalltitle);
     line-height: 1.5;
     letter-spacing: 1px;
 }
