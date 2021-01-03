@@ -203,5 +203,11 @@ module.exports = {
               trackingId: "UA-106069394-1",
             },
         },
+        {
+            resolve: `gatsby-plugin-sass`,
+            options: {
+                implementation: require('sass')
+            },
+        },
     ],
 }

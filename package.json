@@ -10,7 +10,8 @@
     "url": "git+https://github.com/tryghost/gatsby-starter-ghost.git"
   },
   "resolutions": {
-    "sharp": "0.26.0"
+    "sharp": "0.26.0",
+    "terser": "3.16.1"
   },
   "engines": {
     "node": ">= 10.13.0"
@@ -34,7 +35,8 @@
     "babel-eslint": "10.1.0",
     "eslint": "7.16.0",
     "eslint-plugin-ghost": "2.0.0",
-    "eslint-plugin-react": "7.21.5"
+    "eslint-plugin-react": "7.21.5",
+    "sass": "^1.32.0"
   },
   "dependencies": {
     "@tryghost/helpers": "1.1.35",
@@ -52,6 +54,7 @@
     "gatsby-plugin-manifest": "2.5.2",
     "gatsby-plugin-react-helmet": "3.3.14",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-plugin-sass": "^2.8.0",
     "gatsby-plugin-sharp": "2.7.1",
     "gatsby-source-filesystem": "2.4.2",
     "gatsby-source-ghost": "^3.4.2",
@@ -62,6 +65,8 @@
     "react-helmet": "6.1.0",
     "react-instagram-authless-feed": "github:jamesmoriarty/react-instagram-authless-feed#v1.1.1",
     "react-simple-maps": "^0.12.1",
-    "react-tooltip": "^3.11.6"
+    "react-tooltip": "^3.11.6",
+    "styled-components": "^5.2.1",
+    "terser": "^5.5.1"
   }
 }

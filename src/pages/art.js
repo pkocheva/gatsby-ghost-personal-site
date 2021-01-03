@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { Layout } from '../components/common'
 import Feed from "react-instagram-authless-feed"
 
-import './art.css'
+import './art.scss'
 
 const ArtPage = () => (
     <Layout>

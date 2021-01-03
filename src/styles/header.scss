@@ -1,0 +1,239 @@
+/* Header
+/* ---------------------------------------------------------- */
+
+.site-head {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    background: none;
+}
+
+.site-nav-item {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.site-nav-item:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.site-nav-icon {
+    height: 15px;
+    margin: -5px 0 0;
+}
+
+.site-logo {
+    height: 25px;
+}
+
+.site-mast {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-mast-right {
+    display: flex;
+    align-items: center;
+    margin: 0 -10px 0 20px;
+}
+
+.site-mast-right .site-nav-item:last-child {
+    padding-right: 0;
+}
+
+.site-banner {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10vw 0;
+    text-align: center;
+}
+
+.site-banner-title {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1.3em;
+}
+
+.site-banner-desc {
+    margin: 5px 0 0 0;
+    padding: 0;
+    font-size: 2.4rem;
+    line-height: 1.3em;
+    opacity: 0.7;
+}
+
+.site-nav {
+    display: flex;
+    height: 4rem;
+    margin: 15px 0 0 0;
+    justify-content: flex-start;
+    align-items: center;
+
+    .header-image {
+        margin: 0;
+    
+        img {
+            width: auto;
+            max-width: 4rem;
+            margin-right: 2rem
+        } 
+    }
+
+    .header-image-wrap {
+        margin: 0;
+    }
+
+    .header-title {
+        margin-top: 10px;
+    }
+}
+
+.site-nav-left {
+    margin: 0 20px 0 -10px;
+}
+
+.site-nav-right {
+    margin: 0 -10px 0 20px;
+}
+
+.site-nav-button {
+    display: inline-block;
+    padding: 5px 10px;
+    border: #fff 1px solid;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1em;
+    border-radius: var(--radius);
+    opacity: 0.7;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Hero
+
+.header-home {
+    background: var(--color-backgroundpop);
+
+    &:after {
+        content: "";
+        display: block;
+        transform: rotate(-2deg);
+        background: var(--color-backgroundpop);
+        z-index: 999;
+        position: relative;
+        margin-top: -36px;
+        height: 8rem;
+        width: 105vw;
+        top: 29px;
+        left: -4px;
+    }
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    max-width: 1040px;
+    margin: 0 auto 0 auto;
+    border-radius: 1rem;
+}
+
+.header-description {
+    display: flex;
+    align-items: flex-end;
+    font-family: var(--font-main);
+    padding: 0 5rem;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 300;
+        line-height: 1.5;
+        color: var(--color-titlehero);
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+}
+
+// Profile picture
+
+.header-image {
+    text-align: center;
+    margin-top: 3rem;
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.header-image-wrap {
+    width: 50%;
+    max-width: 24rem;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+
+    // Gradeint overlay on profile photo
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+            to bottom,
+            rgb(133 100 230 / 0.1),
+            rgb(211 90 177 / 0.3)
+        );
+        opacity: 1;
+        border-radius: 50%;
+        mix-blend-mode: overlay;
+    }
+
+    // Cool rainbow on hover
+    &:hover:after {
+        filter: hue-rotate(360deg);
+        transition: 1s;
+    }
+}
+
+// Logo
+
+a.header-title {
+    background-image: linear-gradient(
+        90deg,
+        #f67c6a,
+        #d659ae,
+        #b266e3,
+        #5c61ea
+    );
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 4rem;
+    font-weight: 600;
+    display: block;
+    font-family: galada, sans-serif;
+    transition: 0s;
+    line-height: 2;
+    text-align: center;
+    transition: 0.5s;
+
+    // Cool rainbow on hover
+    &:hover {
+        filter: hue-rotate(360deg);
+        transition: 1s;
+    }
+}
+

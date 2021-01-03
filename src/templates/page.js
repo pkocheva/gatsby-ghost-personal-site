@@ -5,6 +5,9 @@ import { graphql } from 'gatsby'
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
+import GlobalStyles from '../styles/GlobalStyles';
+import { ThemeProvider } from '../components/common/ThemeContext';
+
 /**
 * Single page (/:slug)
 *
@@ -15,7 +18,8 @@ const Page = ({ data, location }) => {
     const page = data.ghostPage
 
     return (
-        <>
+        <>                <ThemeProvider>
+            <GlobalStyles />
             <MetaData
                 data={data}
                 location={location}
@@ -34,6 +38,7 @@ const Page = ({ data, location }) => {
                     </article>
                 </div>
             </Layout>
+        </ThemeProvider>
         </>
     )
 }

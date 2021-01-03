@@ -18,19 +18,19 @@ class LocationBox extends Component {
     componentDidMount() {
         axios.get('https://nomadlist.com/@polinakocheva.json').then(res => {
 
-            if(res.data.location.now.city && res.data.location.now.country) {
+            if(res?.data?.location?.now?.city && res?.data?.location?.now?.country) {
                 this.setState ({
                     currentCity: res.data.location.now.city + ', ' + res.data.location.now.country
                 });
             }
           
-            if(res.data.location.next.city && res.data.location.next.country) {
+            if(res?.data?.location?.next && res.data.location.next.city && res?.data?.location?.next.country) {
                 this.setState ({
-                    nextCity: res.data.location.next.city + ', ' + res.data.location.next.country
+                    nextCity: res.data.location.next.city + ', ' + res?.data?.location?.next.country
                 });
             }
           
-            if(res.data.location.next.date_start) {
+            if(res?.data?.location?.next && res?.data?.location?.next.date_start) {
               var currentDate = moment();
               var fromDate = moment(res.data.location.next.date_start, 'YYYY-MM-DD').toDate();
               var daysRemaining = Math.abs(currentDate.diff(fromDate, 'days'));

@@ -9,6 +9,9 @@ import LocationBox from '../components/home/LocationBox'
 import HomeLinks from '../components/home/HomeLinks'
 import { MetaData } from '../components/common/meta'
 
+import GlobalStyles from '../styles/GlobalStyles';
+import { ThemeProvider } from '../components/common/ThemeContext';
+
 /**
 * Main index page (home page)
 *
@@ -22,35 +25,37 @@ const Index = ({ data, location, pageContext }) => {
 
     return (
         <>
-            <MetaData location={location} />
-            <Layout isHome={true}>
+            <ThemeProvider>
+                <GlobalStyles />
+                <MetaData location={location} />
+                <Layout isHome={true}>
 
-                <div className="container">
-                
-                    <div className="home-section home-grid">
-                        <LocationBox />
+                    <div className="container">
 
-                        <div className="home-box">
-                            <h2 className="home-title">Recent Posts</h2>
+                        <div className="home-section home-grid">
+                            <LocationBox />
 
-                            {posts.slice(0, 3).map(({ node }) => (
-                                    <HomePost key={node.id} post={node} /> 
+                            <div className="home-box">
+                                <h2 className="home-title">Recent Posts</h2>
+
+                                {posts.slice(0, 3).map(({ node }) => (
+                                    <HomePost key={node.id} post={node} />
                                 ))}
+                            </div>
                         </div>
-                    </div>
 
-                    <HomeLinks />
-                    <div class="home-section home-box big-box">
-                    <h2 class="home-title">My map</h2>
-                    <p>
-                        Some of the places that I've travelled to / lived in.
+                        <HomeLinks />
+                        <div className="home-section home-box big-box">
+                            <h2 className="home-title">My map</h2>
+                            <p>
+                                Some of the places that I've travelled to / lived in.
                     <br />
                         The <span className="pink">pink</span> ones link to blog posts about the place - click to read!
                     </p>
-                    </div>
+                        </div>
 
-                    <HomeMap />
-                    {/* 
+                        <HomeMap />
+                        {/* 
                 
                     <section className="post-feed">
                         {posts.map(({ node }) => (
@@ -60,9 +65,10 @@ const Index = ({ data, location, pageContext }) => {
                     </section>
                     */}
 
-                    {/* <Pagination pageContext={pageContext} /> */}
-                </div>
-            </Layout>
+                        {/* <Pagination pageContext={pageContext} /> */}
+                    </div>
+                </Layout>
+            </ThemeProvider>
         </>
     )
 }
