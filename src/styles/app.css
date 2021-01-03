@@ -2032,70 +2032,6 @@ figcaption {
     border-top-color: hsl(317 25% 35% / 1) !important;
 }
 
-/* Dark mode
-/* ---------------------------------------------------------- */
-body.dark {
-    background: hsl(244 33% 8% / 1);
-}
-
-.dark h2 {
-    color: hsl(242 25% 50% / 1);
-}
-
-.dark .header-home {
-    background: hsl(240 75% 7% / 1);
-}
-
-.dark .header-home:after {
-    background: #040420;
-}
-
-.dark .header-description h1 {
-    color: hsl(242 75% 85% / 1);
-}
-
-.dark .home-title {
-    color: hsl(241deg 40% 50%);
-}
-
-.dark .home-links div {
-    background: #121122;
-}
-
-.dark .content p {
-    color: #b8a9be;
-}
-
-.dark .content-title,
-.dark .site-main h1,
-.dark .tag-header h1 {
-    color: #a465e4;
-}
-
-.dark .location-box-inner {
-    background: transparent;
-    border: 1px solid hsl(241 50% 30% / 1);
-}
-
-.dark .location-box-inner svg {
-    background: hsl(241 50% 30% / 1);
-}
-
-.dark path.rsm-geography {
-    fill: #000 !important;
-    stroke: rgb(65 64 146) !important;
-}
-
-.dark .post-card {
-    background: transparent;
-    border: 1px solid hsl(241 50% 30% / 1);
-}
-
-.dark .post-card-title {
-    color: hsl(268 80% 75% / 1);
-    line-height: 1.5;
-    letter-spacing: 1px;
-}
 
 .darkModeToggle {
     position: absolute;
@@ -2113,7 +2049,8 @@ input[type="checkbox"]#darkModeToggle {
 .check-trail {
     display: flex;
     align-items: center;
-    width: 6em;height: 3.5em;
+    width: 6em;
+    height: 3.5em;
     background: #fff;
     border-radius: 2.5em;
     transition: all 0.5s ease 0s;

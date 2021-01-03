@@ -1,61 +1,37 @@
-import React, { Component } from "react"
+import React from "react";
 
-class DarkModeToggle extends Component {
+import { ThemeContext } from './ThemeContext';
 
-    constructor(props) {
-        super(props);
+import {
+    COLOR_MODE_KEY,
+  } from '../../styles/constants';
 
-        this.handleChange = this.handleChange.bind(this);
 
-        this.state = {
-            darkModeOn: false
-        };
+
+const DarkModeToggle = () => {
+    const { colorMode, setColorMode } = React.useContext(ThemeContext);
+
+    if (!colorMode) {
+        return null;
     }
 
-    handleChange() {
-        if (!this.state.darkModeOn) document.body.classList.add('dark');
-        else document.body.classList.remove('dark');
+    return (
+        <div className="darkModeToggle">
 
-        this.state = {
-            darkModeOn: !this.state.darkModeOn
-        };
+            <input
+                type="checkbox"
+                id="darkModeToggle" 
+                checked={colorMode === 'dark'}
+                onChange={ev => {
+                    setColorMode(ev.target.checked ? 'dark' : 'light');
+                }}
+            />
+            <label for="darkModeToggle"  className="check-trail">
+                <span className="check-handler"></span>
+            </label>
+        </div>
 
-        document.getElementById("darkModeToggle").checked = this.state.darkModeOn;
-        window.localStorage.setItem('darkmode', JSON.stringify(this.state.darkModeOn));
-    }
-
-    componentDidMount() {
-        console.log('mount')
-
-        const localStorageDarkMode = window.localStorage.getItem('darkmode');
-
-        if (localStorageDarkMode) {
-
-            if (localStorageDarkMode === 'true') {
-                console.log('ADD DARK')
-                setTimeout(() => document.body.classList.add('dark'), 100);
-            }
-
-            this.setState({
-                darkModeOn: localStorageDarkMode === 'true' ? true : false
-            }, () => {
-                document.getElementById("darkModeToggle").checked = this.state.darkModeOn
-            });
-        }
-        
-
-    }
-
-    render() {
-        return (
-            <div className="darkModeToggle">
-                <input id="darkModeToggle" type="checkbox" onClick={this.handleChange}/>
-                <label for="darkModeToggle" className="check-trail">
-                    <span className="check-handler"></span>
-                </label>
-            </div>
-        )
-    }
-}
+    );
+};
 
 export default DarkModeToggle

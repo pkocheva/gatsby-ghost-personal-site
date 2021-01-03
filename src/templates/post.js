@@ -5,6 +5,9 @@ import { graphql } from 'gatsby'
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
+import GlobalStyles from '../styles/GlobalStyles';
+import { ThemeProvider } from '../components/common/ThemeContext';
+
 /**
 * Single post view (/:slug)
 *
@@ -24,10 +27,12 @@ const Post = ({ data, location }) => {
             var ratio = width / height;
             container.style.flex = ratio + ' 1 0%';
         })
-      });
+    });
 
     return (
-            <>
+        <>
+            <ThemeProvider>
+                <GlobalStyles />
                 <MetaData
                     data={data}
                     location={location}
@@ -37,7 +42,7 @@ const Post = ({ data, location }) => {
                     <div className="container">
                         <article className="content">
 
-                        {/* 
+                            {/* 
                         <header class="post-full-header">
                             <section class="post-full-meta">
                                 {{#primary_tag}}
@@ -47,15 +52,15 @@ const Post = ({ data, location }) => {
                             <h1 class="post-full-title">{{title}}</h1>
                         </header>
                         */}
-                            <h1 class="post-full-title">{ post.title }</h1>
-                            { post.feature_image ?
+                            <h1 class="post-full-title">{post.title}</h1>
+                            {post.feature_image ?
                                 <figure className="post-feature-image">
-                                    <img src={ post.feature_image } alt={ post.title } />
-                                </figure> : null }
+                                    <img src={post.feature_image} alt={post.title} />
+                                </figure> : null}
                             <section className="post-full-content">
-                                
 
-                                {/* The main post content */ }
+
+                                {/* The main post content */}
                                 <section
                                     className="content-body load-external-scripts"
                                     dangerouslySetInnerHTML={{ __html: post.html }}
@@ -64,7 +69,8 @@ const Post = ({ data, location }) => {
                         </article>
                     </div>
                 </Layout>
-            </>
+            </ThemeProvider>
+        </>
     )
 }
 

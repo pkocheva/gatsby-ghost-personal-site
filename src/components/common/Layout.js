@@ -4,9 +4,13 @@ import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
+import { ThemeContext } from './ThemeContext'
+
 import { Navigation } from '.'
 import DarkModeToggle from './DarkModeToggle'
 import config from '../../utils/siteConfig'
+
+import { ThemeProvider } from './ThemeContext';
 
 // Styles
 import '../../styles/app.css'
@@ -32,15 +36,16 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <body className={''} />
             </Helmet>
 
-
+            <ThemeProvider>
+                
             <div className="viewport">
 
                 <div className="viewport-top">
 
                     {/* The main header section on top of the screen */}
 
-                    {isHome ? (
-                        <header className="header-home">
+                        <header className={isHome ? "header-home" : "site-head"}>
+                        {isHome ? (
                             <div className="header-wrapper">
                                 <div>
                                     <div className="header-image">
@@ -54,29 +59,28 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         <h2>I <Link to="/work/">work</Link> remotely from my home in Barcelona or coworking spaces around the world. I love to <Link to="/tag/travel/">travel</Link> and my lifestyle is semi-nomadic.<br />&nbsp;</h2>
                                     </div>
                                 </div>
-                                <DarkModeToggle />
-                               
+                                
+
                             </div>
+                        ) : (
+                            <div className="container">
+
+                            <nav className="site-nav">
+                                <div className="header-image">
+                                    <div className="header-image-wrap"><img src="/images/me.jpg" /></div>
+                                </div>
+
+                                <Link to="/" className="header-title">Polina Kocheva</Link>
+
+                                {/* <Navigation data={site.navigation} navClass="site-nav-item" /> */}
+
+                            </nav>
+                        </div>
+                        )}
+                        <DarkModeToggle />
 
                         </header>
-                    ) : (
-                            <header className="site-head">
-                                <div className="container">
-
-                                    <nav className="site-nav">
-                                        <div className="header-image">
-                                            <div className="header-image-wrap"><img src="/images/me.jpg" /></div>
-                                        </div>
-
-                                        <Link to="/" className="header-title">Polina Kocheva</Link>
-
-                                        {/* <Navigation data={site.navigation} navClass="site-nav-item" /> */}
-
-                                    </nav>
-                                </div>
-                                <DarkModeToggle />
-                            </header>
-                        )}
+                        
                     {/*
                 <header className="site-head">
                     <div className="container">
@@ -194,7 +198,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     </footer>
                 </div>
             </div>
-
+            </ThemeProvider>
         </>
     )
 }

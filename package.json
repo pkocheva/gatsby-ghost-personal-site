@@ -10,7 +10,8 @@
     "url": "git+https://github.com/tryghost/gatsby-starter-ghost.git"
   },
   "resolutions": {
-    "sharp": "0.26.0"
+    "sharp": "0.26.0",
+    "terser": "3.16.1"
   },
   "engines": {
     "node": ">= 10.13.0"
@@ -62,6 +63,8 @@
     "react-helmet": "6.1.0",
     "react-instagram-authless-feed": "github:jamesmoriarty/react-instagram-authless-feed#v1.1.1",
     "react-simple-maps": "^0.12.1",
-    "react-tooltip": "^3.11.6"
+    "react-tooltip": "^3.11.6",
+    "styled-components": "^5.2.1",
+    "terser": "^5.5.1"
   }
 }
