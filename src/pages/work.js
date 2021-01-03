@@ -3,12 +3,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Layout } from '../components/common'
 
+import './work.scss'
+
 const WorkPage = () => (
     <Layout>
         <div className="container">
             <div className="home-section" style={{ paddingTop: '0' }}>
                 <div className="tools-wrap">
-                    <div id="tools-dev" className="home-tools-imgs">
+                    <div className="tools">
                         <h1>Work</h1>
                         <img alt="Angular" src="/images/angular.png" />
                         <img alt="Typescript" src="/images/typescript.png" />

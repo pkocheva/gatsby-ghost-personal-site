@@ -13,7 +13,7 @@ import config from '../../utils/siteConfig'
 import { ThemeProvider } from './ThemeContext';
 
 // Styles
-import '../../styles/app.css'
+import '../../styles/app.scss'
 
 /**
 * Main layout component

@@ -1,0 +1,22 @@
+.tools-wrap {
+    min-height: 100px;
+}
+
+.tools img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    margin: 4rem 1rem 1rem 0;
+    filter: saturate(0);
+    transition: 0.5s;
+    &:hover {
+        filter: saturate(1);
+    }
+
+    h1 {
+        position: relative;
+        width: auto;
+        display: inline;
+        vertical-align: bottom;
+    }
+}

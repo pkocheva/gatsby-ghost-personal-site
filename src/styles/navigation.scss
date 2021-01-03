@@ -1,0 +1,128 @@
+
+/* 5. Site Navigation
+/* ---------------------------------------------------------- */
+
+.site-nav {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-y: hidden;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+.site-nav-left {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin-right: 10px;
+    padding-bottom: 80px;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+
+    -ms-overflow-scrolling: touch;
+}
+
+/* Site Nav Hack Explanation (above):
+
+What's happening above it .site-nav-left is set to overflow-x and allow sideways scrolling, so that when there isn't enough space for all nav items (either due to lots of nav items, or a small viewport), you can still scroll side-to-side to reach them.
+
+The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px of padding-bottom and a 40px fixed height parent (.site-nav) hides that entirely. Slightly hacky code. But nice clean end-result.
+
+*/
+
+.site-nav-left .header-title {
+    color: #fff;
+    font-size: 3rem;
+    padding: 0.1rem 3rem 0 0;
+}
+
+.site-nav-left .header-title:hover {
+    text-decoration: none;
+    filter: none;
+}
+
+.site-nav-right {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.social-links {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.social-links a:last-of-type {
+    padding-right: 20px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    opacity: 1;
+    background: none !important;
+}
+
+.social-link svg {
+    height: 1.8rem;
+    fill: #fff;
+}
+
+.social-link-fb svg {
+    height: 1.5rem;
+}
+
+.social-link-wb svg {
+    height: 1.6rem;
+}
+
+.social-link-wb svg path {
+    stroke: #fff;
+}
+
+.social-link-rss svg {
+    height: 1.9rem;
+}
+
+.rss-button {
+    opacity: 0.8;
+}
+
+.rss-button:hover {
+    opacity: 1;
+}
+
+.rss-button svg {
+    margin-bottom: 1px;
+    height: 2.1rem;
+    fill: #fff;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .site-nav-left {
+        margin-right: 0;
+        padding-left: 4vw;
+    }
+    .site-nav-right {
+        display: none;
+    }
+}
