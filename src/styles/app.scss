@@ -43,11 +43,21 @@
     --radius: 0.6rem;
 }
 
-/* Main
-/* ---------------------------------------------------------- */
-
 .site-main {
     padding: 4vw;
+}
+
+a {
+    color: #d659ae;
+    font-family: 'open sans';
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    &:hover:not(.header-title) {
+        text-decoration: none;
+        color: #fff;
+        background: #d659ae;
+    }
 }
 
 /* Galleries from Casper 

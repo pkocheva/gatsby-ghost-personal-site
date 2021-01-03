@@ -65,6 +65,10 @@
     }
 }
 
+footer.site-footer a:hover {
+    background: none !important;
+}
+
 @media (max-width: 650px) {
     .site-footer-content {
         flex-direction: column;

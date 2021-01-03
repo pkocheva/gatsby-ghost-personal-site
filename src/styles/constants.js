@@ -21,7 +21,7 @@ export const COLORS = {
     },
     smalltitle: {
         light: 'hsl(242 10% 10% / 1)', // near black
-        dark: 'hsl(269 80% 75% / 1)' // purple-pink
+        dark: 'hsl(282 15% 70% / 1)' // purple-pink
     },
     title2: {
         light: 'hsl(242 40% 50% / 1)', // purple-blue (2)

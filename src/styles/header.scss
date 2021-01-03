@@ -210,7 +210,7 @@
 
 // Logo
 
-.header-title {
+a.header-title {
     background-image: linear-gradient(
         90deg,
         #f67c6a,
@@ -228,6 +228,7 @@
     transition: 0s;
     line-height: 2;
     text-align: center;
+    transition: 0.5s;
 
     // Cool rainbow on hover
     &:hover {

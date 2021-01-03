@@ -1,4 +1,3 @@
-
 /* Index
 /* ---------------------------------------------------------- */
 
@@ -53,12 +52,9 @@
 }
 
 .post-card-excerpt {
-    font-size: 1.6rem;
-    line-height: 1.55em;
     margin: 0 0 1.5rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2;
-    color: #88a6dd;
     color: #4e6082;
 }
 
@@ -144,10 +140,6 @@ a.post-card-image-link {
     justify-content: space-between;
 }
 
-.post-card-excerpt {
-    font-family: Georgia, serif;
-}
-
 a.post-card-content-link {
     position: relative;
     -ms-flex-positive: 1;
@@ -156,6 +148,9 @@ a.post-card-content-link {
     padding: 25px 25px 0;
     color: #15171a;
     border: none;
+    &:hover {
+        background: none !important;
+    }
 }
 
 .post-card-title {
@@ -197,6 +192,9 @@ a.post-card-content-link {
     display: block;
     overflow: hidden;
     border-radius: 5px 5px 0 0;
+    &:hover {
+        background: none !important;
+    }
 }
 
 a.post-card-image-link {
@@ -221,12 +219,11 @@ a.post-card-content-link {
     padding: 25px 25px 0;
     color: var(--darkgrey);
     border: none;
-}
-
-a.post-card-content-link:hover {
-    text-decoration: none;
-    background: inherit;
-    color: inherit;
+    &:hover {
+        text-decoration: none;
+        background: inherit;
+        color: inherit !important;
+    }
 }
 
 .post-card-tags {
@@ -249,10 +246,6 @@ a.post-card-content-link:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.post-card-excerpt {
-    font-family: Georgia, serif;
 }
 
 .post-card-meta {

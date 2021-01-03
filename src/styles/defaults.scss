@@ -227,19 +227,6 @@ body {
     font-family: var(--font-main);
 }
 
-a:not(.header-title) {
-    color: #d659ae;
-    text-decoration: none;
-    border-bottom: 1px dotted #a00afc;
-    transition: 0.5s;
-}
-
-a:not(.header-title):hover {
-    text-decoration: none;
-    color: #fff;
-    background: #d659ae;
-}
-
 p {
     margin: 0 0 1.5rem;
     font-size: 2rem;
