@@ -5,7 +5,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
-    background: var(--color-base);
+    background: none;
 }
 
 .site-nav-item {
@@ -70,9 +70,28 @@
 
 .site-nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 4rem;
     margin: 15px 0 0 0;
+    justify-content: flex-start;
+    align-items: center;
+
+    .header-image {
+        margin: 0;
+    
+        img {
+            width: auto;
+            max-width: 4rem;
+            margin-right: 2rem
+        } 
+    }
+
+    .header-image-wrap {
+        margin: 0;
+    }
+
+    .header-title {
+        margin-top: 10px;
+    }
 }
 
 .site-nav-left {
@@ -92,13 +111,11 @@
     line-height: 1em;
     border-radius: var(--radius);
     opacity: 0.7;
-}
 
-.site-nav-button:hover {
-    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
 }
-
-/** Customizatons */
 
 // Hero
 
@@ -124,7 +141,7 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     max-width: 1040px;
-    margin: 1rem auto 0 auto;
+    margin: 0 auto 0 auto;
     border-radius: 1rem;
 }
 
@@ -219,6 +236,3 @@
     }
 }
 
-.site-nav .header-image-wrap {
-    margin: 0;
-}
