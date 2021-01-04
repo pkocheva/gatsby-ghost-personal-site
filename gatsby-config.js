@@ -209,5 +209,16 @@ module.exports = {
                 implementation: require('sass')
             },
         },
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+              plugins: [
+                {
+                  resolve: `gatsby-remark-prismjs`,
+                  options: {},
+                },
+              ],
+            },
+          },
     ],
 }

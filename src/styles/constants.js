@@ -16,8 +16,8 @@ export const COLORS = {
         dark: 'hsl(269 70% 64% / 1)' // purple-pink
     },
     subtitle: {
-        light: 'hsl(242 25% 50% / 1)', // light purple-blue (1)
-        dark: 'hsl(242 25% 50% / 1)' // light purple-blue (1)
+        light: 'hsl(276deg 19% 5%)', // near black
+        dark: 'hsl(242 25% 90% / 1)' // near white
     },
     smalltitle: {
         light: 'hsl(242 10% 10% / 1)', // near black
@@ -47,6 +47,10 @@ export const COLORS = {
         light: 'hsl(200 18% 46% / 1)', // light grey-blue
         dark: 'hsl(242 40% 40% / 1)' // dark purple-blue (2)
     },
+    syntax: {
+        light: 'hsl(242 20% 95% / 1)',
+        dark: 'hsl(242 20% 12% / 1)'
+    }
 
 }
 

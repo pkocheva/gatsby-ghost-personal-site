@@ -25,7 +25,10 @@ var trustAllScripts = function () {
 
         document.getElementsByTagName('head')[0].appendChild(s);
     }
-};
+};  
+
+//require("prism-themes/themes/prism-material-light.css");
+require("prismjs/plugins/line-numbers/prism-line-numbers.css");
 
 exports.onRouteUpdate = function () {
     trustAllScripts();

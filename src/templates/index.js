@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+
+import Prism from 'prismjs'
 
 import { Layout } from '../components/common'
 import HomeMap from '../components/home/HomeMap'
@@ -22,6 +24,11 @@ import { ThemeProvider } from '../components/common/ThemeContext';
 */
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges
+
+    useEffect(() => {
+        // call the highlightAll() function to style our code blocks
+        Prism.highlightAll()
+      })
 
     return (
         <>
@@ -49,9 +56,9 @@ const Index = ({ data, location, pageContext }) => {
                             <h2 className="home-title">My map</h2>
                             <p>
                                 Some of the places that I've travelled to / lived in.
-                    <br />
-                        The <span className="pink">pink</span> ones link to blog posts about the place - click to read!
-                    </p>
+                            <br />
+                                The <span className="pink">pink</span> ones link to blog posts about the place - click to read!
+                            </p>
                         </div>
 
                         <HomeMap />
