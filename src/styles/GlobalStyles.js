@@ -26,7 +26,8 @@ strong {
     background: var(--color-background);
 }
 
-.header-description h1 {
+.header-description h1,
+.header-description h1 strong {
     color: var(--color-titlehero);
 }
 
