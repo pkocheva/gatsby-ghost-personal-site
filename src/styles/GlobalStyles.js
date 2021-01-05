@@ -8,7 +8,8 @@ body {
     background: var(--color-background);
 }
 
-pre {
+pre,
+code {
     background: var(--color-syntax);
 }
 
