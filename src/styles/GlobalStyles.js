@@ -12,6 +12,9 @@ pre {
     background: var(--color-syntax);
 }
 
+strong {
+    color: var(--color-subtitle);
+}
 
 .header-home,
 .header-home:after {

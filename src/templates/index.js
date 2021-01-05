@@ -25,10 +25,7 @@ import { ThemeProvider } from '../components/common/ThemeContext';
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges
 
-    useEffect(() => {
-        // call the highlightAll() function to style our code blocks
-        Prism.highlightAll()
-      })
+
 
     return (
         <>
