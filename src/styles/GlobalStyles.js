@@ -8,6 +8,15 @@ body {
     background: var(--color-background);
 }
 
+pre,
+code {
+    background: var(--color-syntax);
+}
+
+strong {
+    color: var(--color-subtitle);
+}
+
 .header-home,
 .header-home:after {
     background: var(--color-backgroundpop);
@@ -17,7 +26,8 @@ body {
     background: var(--color-background);
 }
 
-.header-description h1 {
+.header-description h1,
+.header-description h1 strong {
     color: var(--color-titlehero);
 }
 
@@ -25,7 +35,9 @@ body {
     color: var(--color-title2);
 }
 
-h2 {
+h2,
+.content-body h2,
+.content-body h3 {
     color: var(--color-subtitle);
 }
 
@@ -35,7 +47,8 @@ h2 {
     color: var(--color-title);
 }
 
-.content p {
+.content p,
+.content li {
     color: var(--color-text);
 }
 

@@ -10,9 +10,11 @@
 @use './header.scss';
 @use './footer.scss';
 
+@use './prism.scss';
+
 @use './homepage.scss';
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Poppins|Martel+Sans|Galada");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Fira+Mono|Martel+Sans|Galada");
 
 /* Variables
 /* ---------------------------------------------------------- */
@@ -25,13 +27,16 @@
     --color-border: #c7d5d8;
     --color-bg: #f5f5f5;
 
+    --color-homepage-subtitle-static: hsl(242 25% 50% / 1);
+    
+
     /* Fonts */
     --font-main: "Martel Sans";
     --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
     --font-serif: Georgia, Times, serif;
-    --font-mono: Menlo, Courier, monospace;
+    --font-mono: "Fira Mono", Menlo, Courier, monospace;
     --font-light: 100;
     --font-normal: 400;
     --font-bold: 700;
@@ -41,10 +46,6 @@
     --height: 4rem;
     --margin: 2rem;
     --radius: 0.6rem;
-}
-
-.site-main {
-    padding: 4vw;
 }
 
 a {
@@ -58,6 +59,41 @@ a {
         color: #fff;
         background: #d659ae;
     }
+}
+
+code {
+    background: #f0f0f5;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    tab-size: 4;
+    hyphens: none;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+li::marker {
+    color: #6762e9;
+    content: '\279C';
+}
+
+.site-main {
+    padding: 4vw;
+}
+
+.post-full-content {
+    margin: 0;
+}
+
+h1.post-full-title {
+    max-width: 960px;
 }
 
 /* Galleries from Casper 
@@ -239,8 +275,13 @@ input[type="checkbox"]:checked + .check-trail:hover .check-handler {
     }
 }
 
+.content li {
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+}
+
 .content-body h2 {
-    color: #090a0b;
+    color: var(--color-subtitle);
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
 }

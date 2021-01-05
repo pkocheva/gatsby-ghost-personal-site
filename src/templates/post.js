@@ -8,6 +8,8 @@ import { MetaData } from '../components/common/meta'
 import GlobalStyles from '../styles/GlobalStyles';
 import { ThemeProvider } from '../components/common/ThemeContext';
 
+import Prism from "prismjs";
+
 /**
 * Single post view (/:slug)
 *
@@ -27,6 +29,7 @@ const Post = ({ data, location }) => {
             var ratio = width / height;
             container.style.flex = ratio + ' 1 0%';
         })
+        Prism.highlightAll()
     });
 
     return (
