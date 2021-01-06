@@ -2,10 +2,10 @@
 /* ---------------------------------------------------------- */
 
 .site-head {
-    padding-top: 20px;
-    padding-bottom: 20px;
     color: #fff;
-    background: none;
+    background: var(--color-backgroundpop);
+    position: fixed;
+    width: 100%;
 }
 
 .site-nav-item {
@@ -70,10 +70,9 @@
 
 .site-nav {
     display: flex;
-    height: 4rem;
-    margin: 15px 0 0 0;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    height: auto;
 
     .header-image {
         margin: 0;
@@ -239,3 +238,20 @@ a.header-title {
     }
 }
 
+.header-profile {
+    display: flex;
+    align-items: center
+}
+
+.header-menu {
+    display: flex; 
+    align-items: baseline;
+
+    p {
+        margin: 0 3rem 0 0
+    }
+
+    .darkModeToggle {
+        position: initial;
+    }
+}

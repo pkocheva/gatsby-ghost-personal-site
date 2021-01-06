@@ -17,8 +17,10 @@ strong {
     color: var(--color-subtitle);
 }
 
+html,
 .header-home,
-.header-home:after {
+.header-home:after,
+.site-head {
     background: var(--color-backgroundpop);
 }
 
