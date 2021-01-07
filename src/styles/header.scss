@@ -121,6 +121,7 @@
 .header-home {
     background: var(--color-backgroundpop);
 
+    /*
     &:after {
         content: "";
         display: block;
@@ -134,6 +135,7 @@
         top: 29px;
         left: -4px;
     }
+    */
 }
 
 .header-wrapper {
@@ -254,4 +256,14 @@ a.header-title {
     .darkModeToggle {
         position: initial;
     }
+}
+
+.header-wave {
+    width: 100%;
+    margin-top: -15px;
+    fill: #ffffff;
+    transition: tr;
+    transform: scale(-1);
+    margin-bottom: -70px;
+    min-width: 960px;
 }
