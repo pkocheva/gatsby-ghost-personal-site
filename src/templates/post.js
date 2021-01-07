@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import { Layout } from '../components/common'
 import { MetaData } from '../components/common/meta'
@@ -18,6 +18,9 @@ import Prism from "prismjs";
 */
 const Post = ({ data, location }) => {
     const post = data.ghostPost
+
+    const tags = post.tags;
+    const tagsHtml = <div className="post-tags">{ tags.map((tag) => {return <Link to={'/tag/' + tag.slug} className="post-tag">{tag.name}</Link>}) }</div>
 
     // JS from Casper to make galleries work
     useEffect(() => {
@@ -55,13 +58,14 @@ const Post = ({ data, location }) => {
                             <h1 class="post-full-title">{{title}}</h1>
                         </header>
                         */}
-                            <h1 class="post-full-title">{post.title}</h1>
+                            <h1 className="post-full-title">{post.title}</h1>
+                            {tagsHtml}
                             {post.feature_image ?
                                 <figure className="post-feature-image">
                                     <img src={post.feature_image} alt={post.title} />
-                                </figure> : null}
+                                </figure> 
+                            : null}
                             <section className="post-full-content">
-
 
                                 {/* The main post content */}
                                 <section
