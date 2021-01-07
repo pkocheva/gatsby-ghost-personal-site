@@ -6,6 +6,7 @@
     background: var(--color-backgroundpop);
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .site-nav-item {
@@ -253,6 +254,19 @@ a.header-title {
         margin: 0 3rem 0 0
     }
 
+    a {
+        color: var(--color-text);
+        padding: 1rem;
+        margin: 0 0.5rem;
+        border-radius: 1rem;
+        transition: 0.2s;
+
+        &:hover {
+            background: var(--color-background) !important;
+            color: var(--color-text) !important;
+        }
+    }
+
     .darkModeToggle {
         position: initial;
     }
@@ -261,7 +275,7 @@ a.header-title {
 .header-wave {
     width: 100%;
     margin-top: -15px;
-    fill: #ffffff;
+    fill: var(--color-backgroundpop);
     transition: tr;
     transform: scale(-1);
     margin-bottom: -70px;
