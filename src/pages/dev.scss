@@ -1,0 +1,33 @@
+.dev-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+    margin-top: 5rem;
+}
+
+a.dev-post {
+    background: var(--color-backgroundpop);
+    padding: 5rem 4rem;
+    border-radius: 2rem;
+
+    &:hover {
+        background: var(--color-backgroundpop) !important;
+        transition: all .4s ease;
+        transform: translate3D(0,-1px,0) scale(1.02);
+    }
+}
+
+h2.dev-title {
+    font-size: 3rem;
+    color: var(--color-text);
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+p.dev-excerpt {
+    margin: 2rem 0;
+    line-height: 2;
+    color: #4e6082;
+    font-size: 1.6rem;
+}
