@@ -5,7 +5,7 @@ export const COLORS = {
     },
     backgroundpop: {
         light: 'hsl(0 0% 100% / 1)', // very light grey
-        dark: 'hsl(242 75% 7% / 1)' // dark navy
+        dark: 'hsl(242 40% 12% / 1)' // dark navy
     },
     text: {
         light: 'hsl(242 15% 7% / 1)', // grey
