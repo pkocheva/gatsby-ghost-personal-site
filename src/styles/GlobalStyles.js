@@ -17,8 +17,10 @@ strong {
     color: var(--color-subtitle);
 }
 
+html,
 .header-home,
-.header-home:after {
+.header-home:after,
+.site-head {
     background: var(--color-backgroundpop);
 }
 
@@ -67,8 +69,7 @@ path.rsm-geography {
 }
 
 .post-card {
-    background: transparent;
-    border: 1px solid var(--color-border);
+    background: var(--color-backgroundpop);
     box-shadow: none;
 }
 

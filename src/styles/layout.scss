@@ -27,6 +27,21 @@
     font-family: var(--font-serif);
 }
 
+.post-tag {
+    display: inline;
+    padding: 0.5rem 1.25rem;
+    margin: 0.5rem;
+    background: #704363;
+    border-radius: 0.5rem;
+    line-height: 1;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.post-tags {
+    margin: 2rem 0;
+}
+
 .post-full-content {
     max-width: 960px;
     margin: 0 auto;
