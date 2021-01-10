@@ -9,6 +9,8 @@ import { MetaData } from '../components/common/meta'
 import GlobalStyles from '../styles/GlobalStyles';
 import { ThemeProvider } from '../components/common/ThemeContext';
 
+import { readingTime as readingTimeHelper } from '@tryghost/helpers'
+
 import './dev.scss'
 
 const WorkPage = ({ data }) => {
@@ -18,9 +20,11 @@ const WorkPage = ({ data }) => {
         {posts.map(
             (post) => {
                 const tags = post.node.tags;
+                const readingTime = readingTimeHelper(post.node);
                 return <Link to={'/' + post.node.slug}  className="dev-post">
                     <div>{ tags.map((tag) => {return tag.feature_image ? <img className="dev-tag-image" src={tag.feature_image} /> : null}) }</div>
                     <h2 className="dev-title">{post.node.title}</h2>
+                    <div className="dev-reading-time">{readingTime}</div>
                     <p className="dev-excerpt">{post.node.excerpt}</p>
                     <div className="dev-read-more">Read more →</div>
                 </Link>

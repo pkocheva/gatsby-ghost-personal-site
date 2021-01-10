@@ -6,9 +6,13 @@
 }
 
 a.dev-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: var(--color-backgroundpop);
     padding: 5rem 4rem;
     border-radius: 2rem;
+    overflow: hidden;
 
     &:hover {
         background: var(--color-backgroundpop) !important;
@@ -37,6 +41,7 @@ h2.dev-title {
 }
 
 p.dev-excerpt {
+    flex-grow: 1;
     margin: 2rem 0;
     line-height: 2;
     color: #4e6082;
@@ -49,8 +54,19 @@ img.dev-tag-image {
 }
 
 .dev-read-more {
+    color: var(--color-text) !important;
     font-size: 2rem;
     font-weight: 600;
     color: initial;
     transition: all .4s ease;
+}
+
+.dev-reading-time {
+    margin: 1rem 0 0 0;
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    opacity: 0.5;
 }
