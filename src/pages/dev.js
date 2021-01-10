@@ -12,15 +12,14 @@ import { ThemeProvider } from '../components/common/ThemeContext';
 import './dev.scss'
 
 const WorkPage = ({ data }) => {
-    console.log(data);
     const posts = data.allGhostPost.edges;
-
-    console.log(posts);
 
     const postsHtml = <div className="dev-grid">
         {posts.map(
             (post) => {
+                const tags = post.node.tags;
                 return <Link to={post.node.slug}  className="dev-post">
+                    <div>{ tags.map((tag) => {return tag.feature_image ? <img className="dev-tag-image" src={tag.feature_image} /> : null}) }</div>
                     <h2 className="dev-title">{post.node.title}</h2>
                     <p className="dev-excerpt">{post.node.excerpt}</p>
                     <div>Read more</div>
@@ -28,8 +27,6 @@ const WorkPage = ({ data }) => {
             })
         }
     </div>
-
-    console.log(postsHtml);
 
     return (
         <ThemeProvider>
