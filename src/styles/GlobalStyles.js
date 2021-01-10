@@ -69,8 +69,7 @@ path.rsm-geography {
 }
 
 .post-card {
-    background: transparent;
-    border: 1px solid var(--color-border);
+    background: var(--color-backgroundpop);
     box-shadow: none;
 }
 
