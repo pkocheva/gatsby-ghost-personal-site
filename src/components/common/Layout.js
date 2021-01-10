@@ -62,7 +62,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     <div className="header-description">
                                         <div>
                                             <h1>Hi 👋 I am a <strong>developer</strong>.</h1>
-                                            <h2>I <Link to="/work/">work</Link> remotely from my home in Barcelona or coworking spaces around the world. I love to <Link to="/tag/travel/">travel</Link> and my lifestyle is semi-nomadic.<br />&nbsp;</h2>
+                                            <h2>This is my blog. I write about my <Link to="/tag/travel/">travels</Link> and <Link to="/dev/">side projects.</Link><br />
+                                            I work remotely and my lifestyle is semi nomadic. Find more here.</h2>
                                         </div>
                                     </div>
                                 </div>
