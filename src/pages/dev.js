@@ -18,7 +18,7 @@ const WorkPage = ({ data }) => {
         {posts.map(
             (post) => {
                 const tags = post.node.tags;
-                return <Link to={post.node.slug}  className="dev-post">
+                return <Link to={'/' + post.node.slug}  className="dev-post">
                     <div>{ tags.map((tag) => {return tag.feature_image ? <img className="dev-tag-image" src={tag.feature_image} /> : null}) }</div>
                     <h2 className="dev-title">{post.node.title}</h2>
                     <p className="dev-excerpt">{post.node.excerpt}</p>
