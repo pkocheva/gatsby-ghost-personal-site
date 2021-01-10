@@ -22,7 +22,7 @@ const WorkPage = ({ data }) => {
                     <div>{ tags.map((tag) => {return tag.feature_image ? <img className="dev-tag-image" src={tag.feature_image} /> : null}) }</div>
                     <h2 className="dev-title">{post.node.title}</h2>
                     <p className="dev-excerpt">{post.node.excerpt}</p>
-                    <div>Read more</div>
+                    <div className="dev-read-more">Read more →</div>
                 </Link>
             })
         }
