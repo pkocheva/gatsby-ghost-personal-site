@@ -70,3 +70,25 @@ img.dev-tag-image {
     letter-spacing: 1px;
     opacity: 0.5;
 }
+
+
+@media (max-width: 675px) {
+    .dev-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tag-header {
+        border-bottom: none;
+        padding-bottom: 0;
+
+        h1 {
+            margin: 3rem 0 0 0;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    h2.dev-title {
+        font-size: 2.5rem;
+    }
+}

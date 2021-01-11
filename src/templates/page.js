@@ -26,7 +26,7 @@ const Page = ({ data, location }) => {
                 type="website"
             />
             <Layout>
-                <div className="container">
+                <div className="container narrow">
                     <article className="content">
                         <h1 className="content-title">{page.title}</h1>
 

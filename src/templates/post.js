@@ -45,7 +45,7 @@ const Post = ({ data, location }) => {
                     type="article"
                 />
                 <Layout>
-                    <div className="container">
+                    <div className="container narrow">
                         <article className="content">
 
                             {/* 
