@@ -4,8 +4,8 @@
 .site-footer {
     position: relative;
     padding: 20px 0 60px 0;
-    color: #fff;
-    background: #000;
+    color: var(--color-text);
+    background: var(--color-backgroundpop);
 }
 
 .site-footer-content {
@@ -14,12 +14,11 @@
     text-align: center;
     padding-top: 4rem;
 
-    a {
-        color: rgba(255, 255, 255, 0.7);
+    a {color: var(--color-text);
         border: none;
 
         &:hover {
-            color: rgba(255, 255, 255, 1);
+            color: var(--color-text);
             text-decoration: none;
             background: none;
         }
@@ -67,6 +66,16 @@
 
 footer.site-footer a:hover {
     background: none !important;
+    color: var(--color-text);
+}
+
+.site-footer-content svg {
+    path, 
+    rect, 
+    circle {
+        fill: #dc6fb7;
+    }
+
 }
 
 @media (max-width: 650px) {

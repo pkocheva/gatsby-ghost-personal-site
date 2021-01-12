@@ -78,6 +78,12 @@ path.rsm-geography {
     line-height: 1.5;
     letter-spacing: 1px;
 }
+
+.site-footer {
+    color: var(--color-text);
+    background: var(--color-backgroundpop);
+}
+
 `;
 
 export default GlobalStyle
