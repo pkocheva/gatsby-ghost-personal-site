@@ -12,7 +12,7 @@ const HomeProjects = () => {
                 <h3>WhereIs.Today</h3>
 
                 <p>
-                    A widget that you can embed anywhere on your wesbite to show where you are right now, where you're going next and in how many days. (Like the box above on this page!)
+                    A widget that you can embed anywhere on your wesbite to show where you are right now, where you're going next and in how many days (Like the box you can see above).
             </p>
             </div>
         </div>
