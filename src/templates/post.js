@@ -47,17 +47,6 @@ const Post = ({ data, location }) => {
                 <Layout>
                     <div className="container narrow">
                         <article className="content">
-
-                            {/* 
-                        <header class="post-full-header">
-                            <section class="post-full-meta">
-                                {{#primary_tag}}
-                                    <a href="{{url}}">{{name}}</a>
-                                {{/primary_tag}}
-                            </section>
-                            <h1 class="post-full-title">{{title}}</h1>
-                        </header>
-                        */}
                             <h1 className="post-full-title">{post.title}</h1>
                             {tagsHtml}
                             {post.feature_image ?

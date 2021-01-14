@@ -8,7 +8,7 @@ import { Layout } from '../components/common'
 import HomeMap from '../components/home/HomeMap'
 import HomePost from '../components/home/HomePost'
 import LocationBox from '../components/home/LocationBox'
-import HomeLinks from '../components/home/HomeLinks'
+import HomeProjects from '../components/home/HomeProjects'
 import { MetaData } from '../components/common/meta'
 
 import GlobalStyles from '../styles/GlobalStyles';
@@ -24,8 +24,6 @@ import { ThemeProvider } from '../components/common/ThemeContext';
 */
 const Index = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges
-
-
 
     return (
         <>
@@ -48,7 +46,8 @@ const Index = ({ data, location, pageContext }) => {
                             </div>
                         </div>
 
-                        <HomeLinks />
+                        <HomeProjects />
+
                         <div className="home-section home-box big-box">
                             <h2 className="home-title">My map</h2>
                             <p>
@@ -59,17 +58,7 @@ const Index = ({ data, location, pageContext }) => {
                         </div>
 
                         <HomeMap />
-                        {/* 
-                
-                    <section className="post-feed">
-                        {posts.map(({ node }) => (
-                            // The tag below includes the markup for each post - components/common/PostCard.js
-                            <PostCard key={node.id} post={node} />
-                        ))}
-                    </section>
-                    */}
 
-                        {/* <Pagination pageContext={pageContext} /> */}
                     </div>
                 </Layout>
             </ThemeProvider>

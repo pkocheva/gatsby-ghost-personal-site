@@ -141,3 +141,33 @@
     border: 1px solid #795dea;
     color: #795dea;
 }
+
+.home-projects {
+    margin: 5rem 0 0 0;
+
+    .home-project {
+        background: var(--color-backgroundpop);
+        padding: 6rem 4rem 4rem 4rem;
+        max-width: 600px;
+        border-radius: 1rem;
+    }
+
+    img {
+        padding: 0 1rem 0 0;
+        margin-top: -7px;
+    }
+
+    p {
+        margin: 3rem 0 0 0;
+    }
+
+    h3 {
+        display: inline;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .home-title {
+        margin: 0 0 5rem 0;
+    }
+}
