@@ -26,7 +26,7 @@ const DarkModeToggle = () => {
                     setColorMode(ev.target.checked ? 'dark' : 'light');
                 }}
             />
-            <label for="darkModeToggle"  className="check-trail">
+            <label htmlFor="darkModeToggle"  className="check-trail">
                 <span className="check-handler"></span>
             </label>
         </div>
