@@ -10,6 +10,7 @@ const ArtPage = () => (
     <Layout>
         <div className="container art">
             <h1>Digital Paintings</h1>
+            <img className="art-image" src="/images/vitosha-forest-hut.jpg" />
             <img className="art-image" src="/images/calm.jpg" />
             <img className="art-image" src="/images/flower-shop.jpg" />
             <img className="art-image" src="/images/willow-tree-island-house.jpg" />
