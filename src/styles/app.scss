@@ -95,6 +95,13 @@ h1.post-full-title {
     max-width: 960px;
 }
 
+// Fix for youtube embed size issue
+
+figure iframe {
+    width: 800px;
+    height: 452px;
+}
+
 /* Galleries from Casper 
 /* ---------------------------------------------------------- */
 
