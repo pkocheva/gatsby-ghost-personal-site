@@ -34,7 +34,7 @@
     --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
-    --font-serif: Georgia, Times, serif;
+    --font-serif: "Merriweather", Georgia, Times, serif;
     --font-mono: "Fira Mono", Menlo, Courier, monospace;
     --font-light: 100;
     --font-normal: 400;
@@ -242,7 +242,7 @@ input[type="checkbox"]:checked + .check-trail:hover .check-handler {
 }
 
 .content p {
-    font-family: var(--font-main);
+    font-family: var(--font-serif);
     font-size: 2.5rem;
     &:first-child {
         font-size: 1.5em;
