@@ -63,7 +63,7 @@
     "gatsby-source-ghost": "^3.4.2",
     "gatsby-transformer-remark": "^2.13.1",
     "gatsby-transformer-sharp": "2.5.21",
-    "lodash": "4.17.20",
+    "lodash": "4.17.21",
     "prism-themes": "^1.5.0",
     "prismjs": "^1.23.0",
     "react": "17.0.1",
