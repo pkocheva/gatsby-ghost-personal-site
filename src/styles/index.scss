@@ -290,60 +290,12 @@ a.post-card-content-link {
     text-align: center;
 }
 
-/* Temporarily adding this here */
-
-/*
-.container.narrow {
-    max-width: none;
-}
-
-
-section.post-full-content {
-    margin: 0 auto;
-}
-*/
-
-/*
-article .post-tags {
-    position: relative;
-    z-index: 2;
-}
-*/
-
-/*
-.site-head {
-    z-index: 3;
-}
-
-section.post-full-content {
-    margin: 40vh auto 0 auto;
-    background: #fbf9f9;
-    position: relative;
-    padding: 5rem;
-    max-width: 1024px;
-}
-
-.post-feature-image img {
-    object-position: top;
-    height: 100vh;
-}
-*/
 
 figure.post-feature-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-
-    ::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg, hsl(237deg 40% 10% / 70%) 10%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
-    }
 
     img {
         object-position: top;
@@ -369,25 +321,3 @@ figure.post-feature-image::after {
     text-align: center;
     margin: 0 auto;
 }
-
-/*
-figure.post-feature-image::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, hsl(237deg 40% 10% / 70%) 10%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
-}
-
-h1.post-full-title {
-    text-align: center;
-    margin: 0 auto;
-}
-
-article h1.post-full-title {
-    position: relative;
-    z-index: 2;
-}
-*/
