@@ -45,8 +45,11 @@
 }
 
 .post-full-content {
-    max-width: 960px;
-    margin: 0 auto;
+    margin: 40vh auto 0 auto;
+    background: #fbf9f9;
+    position: relative;
+    padding: 5rem;
+    max-width: 1024px;
 }
 
 .post-feature-image img {

@@ -314,8 +314,6 @@ article .post-tags {
 .site-head {
     z-index: 3;
 }
-*/
-
 
 section.post-full-content {
     margin: 40vh auto 0 auto;
@@ -324,6 +322,7 @@ section.post-full-content {
     padding: 5rem;
     max-width: 1024px;
 }
+*/
 
 .post-feature-image img {
     object-position: top;
@@ -347,7 +346,7 @@ figure.post-feature-image::after {
     background: linear-gradient(180deg, hsl(237deg 40% 10% / 70%) 10%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
 }
 
-/*
+
 h1.post-full-title {
     text-align: center;
     margin: 0 auto;
@@ -362,4 +361,4 @@ article h1.post-full-title {
     position: relative;
     z-index: 2;
 }
-*/
+
