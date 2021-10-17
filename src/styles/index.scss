@@ -296,34 +296,12 @@ a.post-card-content-link {
 .container.narrow {
     max-width: none;
 }
+
+
+section.post-full-content {
+    margin: 0 auto;
+}
 */
-
-section.post-full-content {
-    margin: 0 auto;
-}
-
-h1.post-full-title {
-    text-align: center;
-    margin: 0 auto;
-}
-
-.post-feature-image img {
-    object-position: top;
-    height: 100vh;
-}
-
-section.post-full-content {
-    margin-top: 40vh;
-    background: #fbf9f9;
-    position: relative;
-    padding: 5rem;
-    max-width: 1024px;
-}
-
-article h1.post-full-title {
-    position: relative;
-    z-index: 2;
-}
 
 /*
 article .post-tags {
@@ -332,15 +310,31 @@ article .post-tags {
 }
 */
 
+/*
+.site-head {
+    z-index: 3;
+}
+*/
+
+
+section.post-full-content {
+    margin: 40vh auto 0 auto;
+    background: #fbf9f9;
+    position: relative;
+    padding: 5rem;
+    max-width: 1024px;
+}
+
+.post-feature-image img {
+    object-position: top;
+    height: 100vh;
+}
+
 figure.post-feature-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-}
-
-.site-head {
-    z-index: 3;
 }
 
 figure.post-feature-image::after {
@@ -353,8 +347,18 @@ figure.post-feature-image::after {
     background: linear-gradient(180deg, hsl(237deg 40% 10% / 70%) 10%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
 }
 
+
+h1.post-full-title {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .site-main h1.post-full-title {
     color: #fff;
     font-family: Merriweather;
 }
 
+article h1.post-full-title {
+    position: relative;
+    z-index: 2;
+}
