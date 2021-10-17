@@ -286,6 +286,10 @@ a.post-card-content-link {
     padding: 0;
 }
 
+.post-tags {
+    text-align: center;
+}
+
 /* Temporarily adding this here */@at-root
 .container.narrow {
     max-width: none;
@@ -299,12 +303,6 @@ h1.post-full-title {
     text-align: center;
     margin: 0 auto;
 }
-
-/*
-.post-tags {
-    text-align: center;
-}
-*/
 
 .post-feature-image img {
     object-position: top;
