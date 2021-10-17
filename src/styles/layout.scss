@@ -35,11 +35,13 @@
     border-radius: 0.5rem;
     line-height: 1;
     color: #fff;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 .post-tags {
     margin: 2rem 0;
+    position: relative;
+    z-index: 2;
 }
 
 .post-full-content {
