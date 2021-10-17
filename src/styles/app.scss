@@ -92,7 +92,13 @@ li::marker {
 }
 
 h1.post-full-title {
+    position: relative;
+    z-index: 2;
     max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-family: Merriweather;
 }
 
 // Fix for youtube embed size issue
