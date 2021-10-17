@@ -347,18 +347,23 @@ figure.post-feature-image::after {
 }
 
 
-h1.post-full-title {
+.site-main h1.post-full-title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-family: Merriweather;
     text-align: center;
     margin: 0 auto;
 }
 
-.site-main h1.post-full-title {
-    color: #fff;
-    font-family: Merriweather;
+/*
+h1.post-full-title {
+    text-align: center;
+    margin: 0 auto;
 }
 
 article h1.post-full-title {
     position: relative;
     z-index: 2;
 }
-
+*/
