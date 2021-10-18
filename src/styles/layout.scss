@@ -35,16 +35,21 @@
     border-radius: 0.5rem;
     line-height: 1;
     color: #fff;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 .post-tags {
     margin: 2rem 0;
+    position: relative;
+    z-index: 2;
 }
 
 .post-full-content {
-    max-width: 960px;
-    margin: 0 auto;
+    margin: 40vh auto 0 auto;
+    background: var(--color-background);
+    position: relative;
+    padding: 5rem;
+    max-width: 1024px;
 }
 
 .post-feature-image img {
@@ -156,6 +161,8 @@
     border-radius: 12px;
 }
 
+/*
 .narrow {
     max-width: 820px;
 }
+*/
