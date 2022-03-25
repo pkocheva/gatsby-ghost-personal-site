@@ -108,6 +108,36 @@ figure iframe {
     height: 452px;
 }
 
+.newsletter-sign-up {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    margin: 3rem 0;
+    padding: 5rem 1rem;
+    box-shadow: 1px 1px 17px rgb(230 106 142 / 50%);
+}
+
+input.newsletter-email {
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    min-width: 250px;
+    font-family: 'Merriweather';
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+}
+
+.button.newsletter-subscribe {
+    padding: 1rem;
+    min-width: 250px;
+    background: linear-gradient(119deg,#f67c6a,#d659ae,#b266e3);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 900;
+    font-size: 2.7rem;
+}
+
 /* Galleries from Casper 
 /* ---------------------------------------------------------- */
 
