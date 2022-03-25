@@ -10,8 +10,8 @@ const HomeNewsletter = ({ post }) => {
 
             <div id="mc_embed_signup" class="">
                 <form action="https://polinakocheva.us14.list-manage.com/subscribe/post?u=82f93ecc415a8369e1e1b92ae&amp;id=54bd4dd3cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-                    <div id="mc_embed_signup_scroll" style={{fontSize: '2.5rem', fontWeight: '300'}}>
-                        <p>I send monthly emails about my projects, my travels, and new posts on this blog. Sign up to follow me.</p>
+                    <div id="mc_embed_signup_scroll" >
+                        <p style={{fontSize: '2.5rem', fontWeight: '300'}}>I send monthly emails about my projects, my travels, and new posts on this blog. Sign up to follow me.</p>
                         <div class="mc-field-group">
                             <input type="email" value="" name="EMAIL" class="newsletter-email" id="mce-EMAIL" placeholder="Your Email" />
                         </div>
