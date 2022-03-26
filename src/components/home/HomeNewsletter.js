@@ -26,23 +26,19 @@ class HomeNewsletter extends Component {
         console.log(this.input.current.value)
         addToMailchimp(this.input.current.value) // listFields are optional if you are only capturing the email address.
         .then(data => {        
-            alert("success!");  
             console.log(data)
-            console.log("CHECK FOR ERROR")
-            console.log(data.result==='error')
-            console.log("CHECK FOR ERROR")
             if(data.result==='error') {
-                alert("error message!");
                 this.setState({
                     error: true, 
                     errorMessage: data.msg,
                 });                           
             } else {
-                alert("success message!");
                 this.setState({
                     buttonText: 'Thank you! ❤️',
                     buttonStyles: {background: '#4f4db3'},
-                    buttonIsDisabled: true
+                    buttonIsDisabled: true,
+                    error: false,
+                    errorMessage: ''
                 });
             }
         })
@@ -66,6 +62,7 @@ class HomeNewsletter extends Component {
                             <p style={{fontSize: '2.5rem', fontWeight: '300'}}>I send monthly emails about my projects, my travels, and new posts on this blog. Sign up to follow me.</p>
                             <div>
                                 <input ref={this.input} type="email" className="newsletter-email" placeholder="Your Email" />
+                                <div className="newsletter-error-message">{this.state.errorMessage}</div>
                             </div>
                             <button style={this.state.buttonStyles} disabled={this.state.buttonIsDisabled} className="newsletter-subscribe button">{this.state.buttonText}</button>
                         </div>
