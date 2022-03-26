@@ -1,41 +1,81 @@
-import React from 'react'
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import React, { Component, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-const HomeNewsletter = ({ post }) => { 
+class HomeNewsletter extends Component { 
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.input = React.createRef();
+        this.state = { 
+            buttonText: 'Subscribe',
+            buttonStyles: {},
+            buttonIsDisabled: false, 
+            error: false, 
+            errorMessage: '',
+        }
+      }
 
-    return (
-        <div class="home-section home-box big-box">
-            <h2 class="home-title">💌 Follow my journey</h2>
+    //const [email, setEmail] = useState("")
+    //const [submitted, setSubmitted] = useState(false)
 
-            <div id="mc_embed_signup" class="">
-                <form action="https://polinakocheva.us14.list-manage.com/subscribe/post?u=82f93ecc415a8369e1e1b92ae&amp;id=54bd4dd3cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-                    <div id="mc_embed_signup_scroll" >
-                        <p style={{fontSize: '2.5rem', fontWeight: '300'}}>I send monthly emails about my projects, my travels, and new posts on this blog. Sign up to follow me.</p>
-                        <div class="mc-field-group">
-                            <input type="email" value="" name="EMAIL" class="newsletter-email" id="mce-EMAIL" placeholder="Your Email" />
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(this.input.current.value)
+        addToMailchimp(this.input.current.value) // listFields are optional if you are only capturing the email address.
+        .then(data => {        
+            alert("success!");  
+            console.log(data)
+            console.log("CHECK FOR ERROR")
+            console.log(data.result==='error')
+            console.log("CHECK FOR ERROR")
+            if(data.result==='error') {
+                alert("error message!");
+                this.setState({
+                    error: true, 
+                    errorMessage: data.msg,
+                });                           
+            } else {
+                alert("success message!");
+                this.setState({
+                    buttonText: 'Thank you! ❤️',
+                    buttonStyles: {background: '#4f4db3'},
+                    buttonIsDisabled: true
+                });
+            }
+        })
+        .catch(() => {
+            alert("error!");
+            // unnecessary because Mailchimp only ever
+            // returns a 200 status code
+            // see below for how to handle errors
+          })
+    }
+    
+
+    render() {
+        return (
+            <div className="home-section home-box big-box" id="home-newsletter">
+                <h2 className="home-title">💌 Follow my journey</h2>
+
+                <div id="mc_embed_signup">
+                    <form onSubmit={this.handleSubmit}>
+                        <div>
+                            <p style={{fontSize: '2.5rem', fontWeight: '300'}}>I send monthly emails about my projects, my travels, and new posts on this blog. Sign up to follow me.</p>
+                            <div>
+                                <input ref={this.input} type="email" className="newsletter-email" placeholder="Your Email" />
+                            </div>
+                            <button style={this.state.buttonStyles} disabled={this.state.buttonIsDisabled} className="newsletter-subscribe button">{this.state.buttonText}</button>
                         </div>
-                        <div hidden="true"><input type="hidden" name="tags" value="7260782" /></div>
-                        <div id="mce-responses" class="clear foot">
-                            <div class="response" id="mce-error-response" style={{display:'none'}}></div>
-                            <div class="response" id="mce-success-response" style={{display:'none'}}></div>
-                        </div>    
-                        <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true"><input type="text" name="b_82f93ecc415a8369e1e1b92ae_54bd4dd3cf" tabindex="-1" value="" /></div>
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter-subscribe button" />
+                    </form>
+                </div>
+
                 
-                    </div>
-                </form>
             </div>
-
-            
-        </div>
-    )
-}
-
-HomeNewsletter.propTypes = {
-    post: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-    }).isRequired,
+        )
+    }
 }
 
 export default HomeNewsletter
