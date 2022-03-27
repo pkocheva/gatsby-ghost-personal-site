@@ -9,6 +9,10 @@
 
 .home-section {
     margin-bottom: 2rem;
+
+    &.home-grid {
+        margin-top: -5rem;
+    }
 }
 
 .home-title {
@@ -52,7 +56,18 @@ h2.home-post {
     font-size: 1.5rem;
     text-transform: uppercase;
     color: grey;
+
+    a:hover {
+        background:none
+    }
 }
+
+/* TODO: get rid of the importants */
+a.home-tag:hover {
+    background:none !important;
+    color: #000 !important;
+}
+
 
 .home-box {
     padding: 4rem 6rem;
