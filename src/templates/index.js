@@ -49,7 +49,7 @@ const Index = ({ data, location, pageContext }) => {
 
                         <HomeNewsletter />
 
-                        <HomeProjects />
+                        {/* <HomeProjects /> */}
 
                         <div className="home-section home-box big-box">
                             <h2 className="home-title">My map</h2>
