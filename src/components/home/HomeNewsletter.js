@@ -59,7 +59,7 @@ class HomeNewsletter extends Component {
                 <div id="mc_embed_signup">
                     <form onSubmit={this.handleSubmit}>
                         <div>
-                            <p style={{fontSize: '2.5rem', fontWeight: '300', marginTop: '3rem'}}>I send monthly emails about my projects, my travels, and new posts on this blog. Sign up to follow me.</p>
+                            <p>I send monthly emails about my projects, my travels, and new posts on this blog. Sign up to follow me.</p>
                             <div>
                                 <input ref={this.input} type="email" className="newsletter-email" placeholder="Your Email" />
                                 <div className="newsletter-error-message">{this.state.errorMessage}</div>

@@ -437,6 +437,11 @@ figcaption {
         padding: 2rem 2rem;
     }
 
+    #home-newsletter p {
+        margin-top: 3rem;
+        font-size: 2.5rem;
+    }
+
     h2.home-title {
         margin-top: 1rem;
     }
@@ -493,5 +498,9 @@ figcaption {
 
     section.post-full-content {
         padding: 0;
+    }
+
+    #home-newsletter p {
+        font-size: 2rem;
     }
 }
