@@ -28,6 +28,19 @@
     .post-feed {
         grid-template-columns: 1fr;
     }
+
+    .post-card{
+        flex-direction: column;
+        padding-bottom: 3rem;
+    }
+
+    a.post-card-image-link {
+        margin-right: 0;
+    }
+
+    a.post-card-image-link img {
+        max-width: 100%;
+    }
 }
 
 .post-card {
