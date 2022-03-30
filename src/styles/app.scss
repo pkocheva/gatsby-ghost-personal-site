@@ -400,8 +400,11 @@ figcaption {
 }
 
 @media (max-width: 450px) {
+    .header-menu {
+        margin: 0 0 1rem 0;
+    }
+
     .header-menu a {
-        padding: 0;
         font-size: 1.5rem;
     }
 
@@ -419,8 +422,6 @@ figcaption {
     .content-title, .tag-header h1, .site-main h1 {
         font-size: 3.5rem;
     }
-
-    /** Mobile styles */
 
     .header-description h2 {
         font-size: 2rem;
