@@ -20,12 +20,11 @@ const Header = ({ isHome }) => {
                             <div className="header-image">
                                 <div className="header-image-wrap"><img src="/images/me.jpg" /></div>
                             </div>
-                            <Link to="/" className="header-title">Polina Kocheva</Link>
                         </div>
                         <div className="header-description">
                             <div>
-                                <h1>Hi 👋 I am a <strong>developer</strong>.</h1>
-                                <h2>This is my blog. I write about my <Link to="/tag/travel/">travels</Link> and <Link to="/dev/">side projects.</Link><br />
+                                <Link to="/" className="header-title">Polina Kocheva</Link>
+                                <h2>This is my blog, where I write about my <Link to="/tag/travel/">travels</Link> and <Link to="/dev/">projects.</Link><br />
                                             I work remotely and my lifestyle is semi nomadic. Find more <Link to="/more">here</Link>.</h2>
                             </div>
                         </div>

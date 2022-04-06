@@ -9,6 +9,10 @@
 
 .home-section {
     margin-bottom: 2rem;
+
+    &.home-grid {
+        margin-top: -5rem;
+    }
 }
 
 .home-title {
@@ -26,11 +30,44 @@
     }
 }
 
+h2.home-title {
+    font-family: 'Merriweather';
+    font-weight: 600;
+}
+
 .home-post {
     font-size: 2.5rem;
     font-weight: 300;
     margin-top: 4rem;
 }
+
+h2.home-post {
+    margin-top: 1rem;
+
+    a {
+        font-family: 'Martel Sans';
+        font-size: 2.4rem;
+        letter-spacing: 0.1px;
+        /* border-bottom: 1px solid; */
+    }
+}
+
+.home-tag {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: grey;
+
+    a:hover {
+        background:none
+    }
+}
+
+/* TODO: get rid of the importants */
+a.home-tag:hover {
+    background:none !important;
+    color: #000 !important;
+}
+
 
 .home-box {
     padding: 4rem 6rem;
@@ -40,6 +77,14 @@
 .big-box p {
     max-width: 570px;
     margin: 2rem 0 4rem;
+}
+
+.header-wrapper {
+    padding-top: 2rem;
+}
+
+.header-description h2 {
+    margin: 0;
 }
 
 // Location box
@@ -171,3 +216,24 @@
         margin: 0 0 5rem 0;
     }
 }
+
+#home-newsletter {
+    background: var(--color-backgroundpop);
+    padding: 1px 5rem 5rem 5rem;
+}
+
+#home-newsletter p {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
+
+button.button.newsletter-subscribe {
+    padding: 1.7rem;
+}
+
+.newsletter-error-message {
+    font-size: 2rem;
+    color: red;
+    padding: 1rem 0;
+}
+

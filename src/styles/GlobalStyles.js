@@ -34,7 +34,7 @@ html,
 }
 
 .home-title {
-    color: var(--color-title2);
+    color: var(--color-title);
 }
 
 h2,

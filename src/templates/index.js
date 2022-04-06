@@ -7,8 +7,9 @@ import Prism from 'prismjs'
 import { Layout } from '../components/common'
 import HomeMap from '../components/home/HomeMap'
 import HomePost from '../components/home/HomePost'
-import LocationBox from '../components/home/LocationBox'
 import HomeProjects from '../components/home/HomeProjects'
+import HomeNewsletter from '../components/home/HomeNewsletter'
+import LocationBox from '../components/home/LocationBox'
 import { MetaData } from '../components/common/meta'
 
 import GlobalStyles from '../styles/GlobalStyles';
@@ -46,7 +47,9 @@ const Index = ({ data, location, pageContext }) => {
                             </div>
                         </div>
 
-                        <HomeProjects />
+                        <HomeNewsletter />
+
+                        {/* <HomeProjects /> */}
 
                         <div className="home-section home-box big-box">
                             <h2 className="home-title">My map</h2>
